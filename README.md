@@ -1,6 +1,6 @@
-# ljhero.github.com
+ï»¿# ljhero.github.com
 
-ÕâÊÇ±¾ÈËÔÚgithubÉÏµÄblog£¬Ê¹ÓÃ[jekyllbootstrap](http://jekyllbootstrap.com)¹¹½¨¡£
+è¿™æ˜¯æœ¬äººåœ¨githubä¸Šçš„blogï¼Œä½¿ç”¨[jekyllbootstrap](http://jekyllbootstrap.com)æ„å»ºã€‚
 
 
 
