@@ -10,6 +10,7 @@ font-family: Georgia, "Hiragino Sans GB", "Helvetica Neue", Helvetica, Arial, Sa
 font-size:15px;
 }
 a{
+color:#36c;
 text-decoration: none;
 }
 ul {
@@ -69,12 +70,12 @@ display: inline-block;
 padding: 20px;
 position: relative;
 zoom: 1;
+padding-top: 0;
 }
 .content{
 margin-left: 0;
 margin-right: 340px;
 background: white;
-border: 1px solid #E9E9E9;
 }
 .side-bar{
 position: absolute;
@@ -82,6 +83,23 @@ left: auto;
 right: 0;
 top: 0;
 width: 320px;
+
+}
+.side-bar .box{
 background: white;
 border: 1px solid #E9E9E9;
+font-size: 14px;
+margin: 10px auto;
+}
+.side-bar .about-me h3{
+padding: 7px 10px;
+border-bottom: 1px dotted #CCC;
+}
+.about-me p.link{
+text-align: right;
+border-top: 1px dotted #CCC;
+padding: 10px;
+}
+.about-me p.link a{
+margin-right: 7px;
 }
