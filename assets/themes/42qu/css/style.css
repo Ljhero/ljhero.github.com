@@ -111,3 +111,18 @@ border-top: 1px dotted #CCC;
 .about-me p.link a{
 margin-right: 7px;
 }
+/* post */
+.tag_box li{
+display: inline-block;
+float: left;
+}
+.tag_box li a{
+padding: 0 2px;
+text-decoration: underline;
+}
+.pagination .prev{
+float: left;
+}
+.pagination .next{
+float: right;
+}
