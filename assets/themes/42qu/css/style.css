@@ -1,0 +1,70 @@
+@charset "utf-8";
+/* Reset */
+body, img, a, div, span, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, 
+fieldset, legend, button, textarea, th, td, tr, input {
+margin: 0;
+padding: 0;
+}
+body{
+font-family: Georgia, "Hiragino Sans GB", "Helvetica Neue", Helvetica, Arial, Sans;
+font-size:15px;
+}
+a{
+text-decoration: none;
+}
+ul {
+list-style: none;
+margin: 0;
+padding: 0;
+}
+/* main */
+.wrapper{
+margin: 0 auto;
+width: 1200px;
+background: white;
+overflow: auto;
+}
+.header{
+padding: 20px;
+}
+.blog-title, .blog-title a{
+font-weight: bold;
+color:#666;
+}
+.title{
+margin-top: 10px;
+height: 100px;
+line-height: 100px;
+font-size: 36px;
+padding-left: 120px;
+background: white url('http://images.cnblogs.com/cnblogs_com/libaoheng/305804/o_light2.png') no-repeat;
+}
+.navigator{
+font-size: 16px;
+height: 48px;
+background: #222;
+text-align: center;
+margin-top: 20px;
+margin-bottom: 20px;
+}
+.nav-list li{
+margin: 0;
+line-height: 48px;
+display: inline-block;
+float: left;
+}
+.nav-list li:hover{
+background: #000;
+}
+.nav-list li:hover a{
+color:white;
+}
+.nav-list li a{
+padding: 0 30px;
+text-decoration: none;
+line-height: 48px;
+border: 0;
+color: gray;
+display: -moz-inline-box;
+display: inline-block;
+}
