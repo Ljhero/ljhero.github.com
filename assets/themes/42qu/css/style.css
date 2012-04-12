@@ -42,7 +42,7 @@ background: white url('http://images.cnblogs.com/cnblogs_com/libaoheng/305804/o_
 .navigator{
 font-size: 16px;
 height: 48px;
-background: #222;
+border-bottom: 1px dotted #CCC;
 text-align: center;
 margin-top: 20px;
 margin-bottom: 20px;
@@ -53,18 +53,35 @@ line-height: 48px;
 display: inline-block;
 float: left;
 }
-.nav-list li:hover{
-background: #000;
-}
 .nav-list li:hover a{
-color:white;
+color:black;
 }
 .nav-list li a{
 padding: 0 30px;
 text-decoration: none;
 line-height: 48px;
 border: 0;
-color: gray;
+color: #999;
 display: -moz-inline-box;
 display: inline-block;
+}
+.main{
+padding: 20px;
+position: relative;
+zoom: 1;
+}
+.content{
+margin-left: 0;
+margin-right: 340px;
+background: white;
+border: 1px solid #E9E9E9;
+}
+.side-bar{
+position: absolute;
+left: auto;
+right: 0;
+top: 0;
+width: 320px;
+background: white;
+border: 1px solid #E9E9E9;
 }
