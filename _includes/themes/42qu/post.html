@@ -2,8 +2,10 @@
 <div class="post">
     {{ content }}
 </div>
-<div>
+<div class="post-date left">
     <p>Posted on {{ page.date | date_to_long_string }}</p>
+  </div>
+  <div class="post-tages right">
         {% unless page.tags == empty %}
             <ul class="tag_box">
             {% assign tags_list = page.tags %}
@@ -11,6 +13,7 @@
             </ul>
           {% endunless %}  
 </div>
+<div style="clear:both"></div>
     <div class="pagination">
       <ul>
       {% if page.previous %}
