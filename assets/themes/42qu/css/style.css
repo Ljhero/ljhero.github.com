@@ -18,8 +18,6 @@ ol,ul {list-style:none;}
 caption,th{text-align:left;}
 /* 来自yahoo, 让标题都自定义, 适应多个系统应用 */
 h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:500;}
-.clearfix {visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0;}
-.clearfix{zoom:1; /* for IE6 IE7 */}
 
 body{
 font-family: Georgia, "Hiragino Sans GB", "Helvetica Neue", Helvetica, Arial, Sans;
