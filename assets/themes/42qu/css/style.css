@@ -18,12 +18,15 @@ list-style: none;
 margin: 0;
 padding: 0;
 }
+p{
+line-height: 28px;
+padding-bottom: 14px;
+}
 /* main */
 .wrapper{
 margin: 0 auto;
 width: 1200px;
 background: white;
-overflow: auto;
 }
 .header{
 padding: 20px;
@@ -95,10 +98,12 @@ margin: 10px auto;
 padding: 7px 10px;
 border-bottom: 1px dotted #CCC;
 }
+.about-me p{
+padding: 10px;	
+}
 .about-me p.link{
-text-align: right;
+text-align: left;
 border-top: 1px dotted #CCC;
-padding: 10px;
 }
 .about-me p.link a{
 margin-right: 7px;
