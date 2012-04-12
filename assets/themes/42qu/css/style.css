@@ -18,13 +18,15 @@ ol,ul {list-style:none;}
 caption,th{text-align:left;}
 /* 来自yahoo, 让标题都自定义, 适应多个系统应用 */
 h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:500;}
+.clearfix {visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0;}
+.clearfix{zoom:1; /* for IE6 IE7 */}
 
 body{
 font-family: Georgia, "Hiragino Sans GB", "Helvetica Neue", Helvetica, Arial, Sans;
 font-size:15px;
 }
 h1, h2, h3, h4, h5, p {
-    margin-bottom: 24px;
+    margin-bottom: 20px;
     padding: 0;
 }
 h1 {
@@ -56,7 +58,7 @@ margin: 0;
 padding: 0;
 }
 p{
-line-height: 28px;
+line-height: 25px;
 }
 pre {
     padding: 0px 24px;
@@ -67,11 +69,6 @@ code {
     font-family: Consolas, Monaco, Andale Mono, monospace;
     line-height: 1.5;
     font-size: 13px;
-}
-aside {
-    display: block;
-    float: right;
-    width: 390px;
 }
 blockquote {
     border-left:.5em solid #eee;

@@ -2,14 +2,15 @@
 <div class="post">
     {{ content }}
 </div>
-    <p><span>Posted on {{ page.date | date_to_long_string }}</span>
+    <p>Posted on {{ page.date | date_to_long_string }}</p>
         {% unless page.tags == empty %}
             <ul class="tag_box">
             {% assign tags_list = page.tags %}
             {% include JB/tags_list %}
+            <li class="clearfix"></li>
             </ul>
           {% endunless %}  
-    </p>
+
     <div class="pagination">
       <ul>
       {% if page.previous %}
