@@ -68,7 +68,7 @@ p code, li code {
     color: #f8f8f8;
     font-size: .8em;
     line-height: 1.5em;
-    border: 1px solid #DDD;
+    border: 1px solid #222;
     -moz-border-radius: 0.4em;
     -webkit-border-radius: 0.4em;
     -o-border-radius: 0.4em;
@@ -89,6 +89,13 @@ pre {
     white-space: pre-wrap;
     max-width: 100%;
     padding: 0.5em 1em;
+    border: 1px solid #222;
+    -moz-border-radius: 0.4em;
+    -webkit-border-radius: 0.4em;
+    -o-border-radius: 0.4em;
+    -ms-border-radius: 0.4em;
+    -khtml-border-radius: 0.4em;
+    border-radius: 0.4em;
 }
 blockquote {
     border-left:.5em solid #eee;
