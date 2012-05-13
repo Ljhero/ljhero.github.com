@@ -33,20 +33,24 @@ Neo4j可以被安装成一个独立运行的服务端程序，客户端程序通
 1.    从[http://neo4j.org/download](http://neo4j.org/download)上下载最新的版本，根据安装的平台选择适当的版本。
 2.    解压安装包，解压后运行终端，进入解压后文件夹中的bin文件夹。
 3.    在终端中运行命令完成安装
+
 > Linux/MacOS系统   `neo4j install`  
 >  Windows系统          `Neo4j.bat install`
+
 4.  在终端中运行命令开启服务
+
 > Linux/MacOS系统   `service neo4j-service start`  
 >  Windows系统          `Neo4j.bat start`
+
 通过`stop`命令可以关闭服务，`status`命令查看运行状态
 
 ### 支持python嵌入式安装
 
-第一步：安装Jpype
+**第一步：安装Jpype**
 
 从[http://sourceforge.net/projects/jpype/files/JPype/](http://sourceforge.net/projects/jpype/files/JPype/) 下载最新版本，windows有exe格式的直接安装程序，linux平台要下载源码包，解压后运行`sudo  python  setup.py  install `完成安装
 
-第二步：安装 neo4j-embedded
+**第二步：安装 neo4j-embedded**
 
 如果安装了python的包管理工具 pip 或者 easy_install 可直接运行
 	Pip install neo4j-embedded  

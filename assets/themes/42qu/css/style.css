@@ -183,6 +183,7 @@ margin-left: 0;
 margin-right: 340px;
 background: white;
 }
+
 .side-bar{
 position: absolute;
 left: auto;
@@ -214,13 +215,21 @@ border-top: 1px dotted #CCC;
 margin-right: 7px;
 }
 /* post */
-.post  ul{
+.post img {
+max-width: 650px;
+display: block;
+margin: 10px auto;
+}
+.post  ul,.post  ol{
 margin-bottom: 20px;
 margin-left: 25px;
 }
 .post ul li{
 margin-bottom: 10px;
 list-style: disc;
+}
+.post ol li{
+margin-bottom: 10px;
 }
 .tag_box li{
 display: inline-block;
