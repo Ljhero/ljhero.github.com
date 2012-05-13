@@ -242,7 +242,7 @@ list-style: circle;
 display: inline-block;
 float: left;
 }
-.tag_box li .clearfloat{
+.tag_box li.clearfloat{
     float: none;
 }
 .tag_box li a{
