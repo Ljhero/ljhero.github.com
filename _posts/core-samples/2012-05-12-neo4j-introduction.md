@@ -2,7 +2,7 @@
 title: Neo4j介绍与使用
 layout: post
 category : 数据库
-tags : [Neo4j, 图行数据库]
+tags : [Neo4j, 图形数据库]
 ---
 {% include JB/setup %}
 
