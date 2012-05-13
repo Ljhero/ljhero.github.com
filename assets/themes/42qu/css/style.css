@@ -230,6 +230,7 @@ list-style: disc;
 }
 .post ol li{
 margin-bottom: 10px;
+list-style: decimal;
 }
 .tag_box li{
 display: inline-block;

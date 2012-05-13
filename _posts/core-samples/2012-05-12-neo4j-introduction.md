@@ -33,12 +33,9 @@ Neo4j可以被安装成一个独立运行的服务端程序，客户端程序通
 1.    从[http://neo4j.org/download](http://neo4j.org/download)上下载最新的版本，根据安装的平台选择适当的版本。
 2.    解压安装包，解压后运行终端，进入解压后文件夹中的bin文件夹。
 3.    在终端中运行命令完成安装
-
 > Linux/MacOS系统   `neo4j install`  
 >  Windows系统          `Neo4j.bat install`
-
 4.  在终端中运行命令开启服务
-
 > Linux/MacOS系统   `service neo4j-service start`  
 >  Windows系统          `Neo4j.bat start`
 
