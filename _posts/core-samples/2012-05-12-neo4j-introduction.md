@@ -1,7 +1,7 @@
 ---
 title: Neo4j介绍与使用
 layout: post
-category : 数据库
+category : database
 tags : [Neo4j, 图形数据库]
 ---
 {% include JB/setup %}
@@ -121,5 +121,5 @@ Neo4j可以被安装成一个独立运行的服务端程序，客户端程序通
 	    print node['name'] 
 	#输出结果：user1
 
-[pic1]: http://bit.ly/KzJOhl
-[pic2]: http://bit.ly/KzJFdI 
+[pic1]: http://pic.yupoo.com/ljhero/BXYqXA4M/oyN6W.png
+[pic2]: http://pic.yupoo.com/ljhero/BXYqXE3K/adncn.png
