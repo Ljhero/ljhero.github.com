@@ -8,8 +8,7 @@ pygments: true
 markdown: rdiscount
 # use for Porse
 prose:
-  rooturl: "_posts"
-   metadata:
+  metadata:
     "_posts/blog":
       title:    "Title of your article"
       abstract: "Abstract"
