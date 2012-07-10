@@ -2,7 +2,7 @@
 layout: post
 category : lessons
 tags : [intro, beginner,prose]
-published: false
+published: true
 ---
 # How does it work?
 
