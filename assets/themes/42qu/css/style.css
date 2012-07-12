@@ -27,7 +27,7 @@ font-family: Georgia, "Hiragino Sans GB", "Helvetica Neue", Helvetica, Arial, Sa
 font-size:15px;
 }
 h1, h2, h3, h4, h5, p {
-    margin-bottom: 20px;
+    margin: 10px 0;
     padding: 0;
 }
 h1 {
@@ -231,7 +231,7 @@ margin-bottom: 20px;
 margin-left: 25px;
 }
 .post ul li{
-margin-bottom: 10px;
+margin: 10px 0;
 list-style: disc;
 }
 .post ol li{
