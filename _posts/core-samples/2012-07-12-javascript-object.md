@@ -1,5 +1,8 @@
 ---
-layout: default
+title: 面向对象的Javascript
+layout: post
+category : 前端开发
+tags : [Javascript, 面向对象]
 published: true
 ---
 Javascript虽然称不上一种严格意义上的面向对象语言，例如没有像PHP，C++那样提供`class`关键字。但在Javascript中所有的东西都是一个对象，除了一些内置的原语（如`null`和`undefined`），这样的特性使其能很方便的进行面向对象的开发，同样也使其面向对象的实现方式具有多样性。
