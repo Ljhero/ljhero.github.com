@@ -7,3 +7,5 @@ published: false
 # How does it work?
 
 Enter Text in Markdown format.
+
+It is very easy to user.
