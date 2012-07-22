@@ -37,8 +37,6 @@ ECB模式是最简单的运行模式，各个分组使用相同的密钥进行�
 
 在.NET平台提供的分组加密类默认使用的是CBC模式，但是可以根据需要更改此默认设置。
 
-[pic1]:http://upload.wikimedia.org/wikipedia/commons/c/c4/Ecb_encryption.png
-[pic2]:http://upload.wikimedia.org/wikipedia/commons/6/66/Cbc_decryption.png
 ## 3. 数据加解密
 
 在实现数据加解密主要涉及到`System.Security.Cryptography`下的`RijndaelManaged`和`CryptoStream`类。前面提到.NET平台的分组加密类默认使用的是CBC模式，所以首先要生成密钥Key和IV。在生成`RijndaelManaged`实例时默认会生成一组长度为16字节随机的Key和IV，在本示例中为了省去通信双方的密钥交换过程，直接指定了Key和IV，加解密都相同。具体看代码，看注释。
