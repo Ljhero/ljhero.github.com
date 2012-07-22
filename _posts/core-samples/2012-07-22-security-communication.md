@@ -168,3 +168,4 @@ ECB模式是最简单的运行模式，各个分组使用相同的密钥进行�
 * [对称加密DES和TripleDES](http://www.cnblogs.com/chnking/archive/2007/08/14/855600.html)
 
 [1]:http://msdn.microsoft.com/zh-cn/library/as0w18af
+[2]:http://files.cnblogs.com/ljhero/RijndaelCrypto.rar
