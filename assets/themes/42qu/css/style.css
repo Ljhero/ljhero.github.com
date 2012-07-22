@@ -84,6 +84,7 @@ p code, li code {
 pre {
     display: block;
     overflow-x: auto;
+    overflow-y: hidden;
     background: #000;
     color: #f8f8f8;
     font-family: 'Consolas', 'Menlo', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
