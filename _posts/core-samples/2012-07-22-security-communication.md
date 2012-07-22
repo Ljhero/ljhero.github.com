@@ -19,7 +19,7 @@ Rijndael算法作为AES的一种，以经取代TripleDES（三重DES）成为新
 
 ECB模式是最简单的运行模式，各个分组使用相同的密钥进行加密，如图1所示。
 <p style="text-align:center;">
-![ECB模式][pic1]
+<img src="http://upload.wikimedia.org/wikipedia/commons/c/c4/Ecb_encryption.png" title="ECB模式" />
 <br />
 图1. ECB模式示意图
 </p>
@@ -29,7 +29,7 @@ ECB模式是最简单的运行模式，各个分组使用相同的密钥进行�
 
 为了解决ECB模式的安全缺陷，可以让重复的明文分组产生不同的密文分组，CBC模式就可满足这一要求。如图2所示，在CBC模式中，一次对一个明文分组加密，每次加密使用同一密钥，加密算法的输入是当前明文分组和前一次密文分组的异或，因此加密算法的输入不会显示出于这次的明文之间的固定关系，所以重复的明文分组不会再密文中暴露出这种重复关系。
 <p style="text-align:center;">
-![CBC模式][pic2]
+<img src="http://upload.wikimedia.org/wikipedia/commons/6/66/Cbc_decryption.png" title="CBC模式"/>
 <br />
 图2 CBC模式示意图
 </p>
