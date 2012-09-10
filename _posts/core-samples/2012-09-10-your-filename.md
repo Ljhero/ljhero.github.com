@@ -59,8 +59,8 @@ A对消息m的签名为(t, s)
 [img01]:http://pic.yupoo.com/ljhero/CfWqMUzk/93bDv.png
 [img02]:http://pic.yupoo.com/ljhero/CfWuQRfD/yokIw.png
 [img03]:http://pic.yupoo.com/ljhero/CfWqMXq5/TQwaV.png
-[img04]:http://pic.yupoo.com/ljhero/CfWtlflz/PvtLv.png
-[img05]:http://pic.yupoo.com/ljhero/CfWqMZ9y/XpP4o.png
-[img06]:http://pic.yupoo.com/ljhero/CfWqMZYD/gOblC.png
-[img07]:http://pic.yupoo.com/ljhero/CfWtlhUj/eLsWo.png
+[img04]:http://pic.yupoo.com/ljhero/CfWqMYlo/ozlL3.png
+[img05]:http://pic.yupoo.com/ljhero/CfWtlflz/PvtLv.png
+[img06]:http://pic.yupoo.com/ljhero/CfWqMZ9y/XpP4o.png
+[img07]:http://pic.yupoo.com/ljhero/CfWqMZYD/gOblC.png
 [img08]:http://pic.yupoo.com/ljhero/CfWtlhUj/eLsWo.png
