@@ -44,8 +44,8 @@ A对消息m的签名为(t, s)
 ## 参考资料
 
 * [IDENTITY-BASED  CRYPTOSYSTEMS  AND  SIGNATURE  SCHEMES][1]
-* [安全协议理论与实践](http://book.douban.com/subject/5502860/)
-* [现代密码学](http://book.douban.com/subject/2057795/)
+* [《安全协议理论与实践》](http://book.douban.com/subject/5502860/)
+* [《现代密码学》](http://book.douban.com/subject/2057795/)
 * [Openssl编程][2]
 
 [1]:http://www.springerlink.com/content/6a7k794f4eprhah3/fulltext.pdf?MUD=MP
