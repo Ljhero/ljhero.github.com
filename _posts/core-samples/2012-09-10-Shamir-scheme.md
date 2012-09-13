@@ -185,6 +185,8 @@ A对消息m的签名为(t, s)
 	BN_copy(n,rsa->n);
 	BN_copy(e,rsa->e);
 
+本文示例程序完整代码：[下载][3]
+
 ## 参考资料
 
 * [IDENTITY-BASED  CRYPTOSYSTEMS  AND  SIGNATURE  SCHEMES][1]
