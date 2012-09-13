@@ -196,6 +196,7 @@ A对消息m的签名为(t, s)
 
 [1]:http://www.springerlink.com/content/6a7k794f4eprhah3/fulltext.pdf?MUD=MP
 [2]:http://pan.baidu.com/share/link?shareid=30835&uk=84790286
+[3]:http://files.cnblogs.com/ljhero/ShamirScheme.rar
 [img01]:http://pic.yupoo.com/ljhero/CfWqMUzk/93bDv.png
 [img02]:http://pic.yupoo.com/ljhero/CfWuQRfD/yokIw.png
 [img03]:http://pic.yupoo.com/ljhero/CfWqMXq5/TQwaV.png
