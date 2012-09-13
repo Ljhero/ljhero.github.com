@@ -48,6 +48,131 @@ A对消息m的签名为(t, s)
 ## 2. 利用OpenSSL密码算法库实现
 
 从对Shamir方案的分析过程可知，其中最主要的操作就是对大数的操作包括乘法，幂运算及模运算。好在OpenSSL提供了一些列大数操作函数，所以此方案实现也不是很困难。其中用到的大数操作函数介绍可以[查看此页面](http://linux.die.net/man/3/bn_mod_exp)，更详细的介绍可以查看赵春平老师对于OpenSSL的介绍文档[Openssl编程][2]。
+	// Shamir基于身份认证
+	int ShamirTest(){
+		BIGNUM	*p,*q;//两个大素数
+		BIGNUM	*n; //n = p*q
+		BIGNUM	*g;//与用户身份对应的秘密密钥
+		BIGNUM	*r;//随机选择数
+		BIGNUM	*t,*s;//签名 t = r^e mod n
+		BIGNUM	*e;//大素数
+		BIGNUM	*d;
+		BIGNUM	*i;//用户身份
+		BIGNUM	*f;
+		BIGNUM	*exp,*left,*right,*tmp;
+		BN_CTX	*ctx;
+		BN_GENCB	*cb = NULL;
+		char u[30],*buf = NULL;
+		char *sANDt = NULL;
+		char m[20];//消息
+		char fHash[1024]= {0};//摘要信息f(t,m)
+		int ret,len,bitsp,bitsq,bits=512;
+		FILE *fp;
+
+
+		ctx = BN_CTX_new();
+		BN_CTX_start(ctx);
+		exp = BN_CTX_get(ctx);
+		tmp = BN_CTX_get(ctx);
+		left = BN_CTX_get(ctx);
+		right = BN_CTX_get(ctx);
+		bitsp = (bits+1)/2;
+		bitsq = bits-bitsp;
+
+		//生成n，e
+		e = BN_new();
+		p = BN_new();
+		q = BN_new();
+		n = BN_new();
+		ret = BN_hex2bn(&e,"1L");
+
+		for (;;)
+		{
+			if(!BN_generate_prime_ex(p, bitsp, 0, NULL, NULL, cb))
+				printf("Error -- p\n");
+			if (!BN_sub(tmp,p,BN_value_one())) 
+				printf("Error -- p-1\n");
+			if (!BN_gcd(left,right,e,ctx)) 
+				printf("Error -- gcd(p-1,e)\n");
+			if (BN_is_one(left)) break;
+		}
+		for (;;)
+		{
+			if(!BN_generate_prime_ex(q, bitsq, 0, NULL, NULL, cb))
+				printf("Error -- q\n");
+			if (!BN_sub(tmp,q,BN_value_one())) 
+				printf("Error -- q-1\n");
+			if (!BN_gcd(left,right,e,ctx)) 
+				printf("Error -- gcd(q-1,e)\n");
+			if (BN_is_one(left)) break;
+		}
+		if (!BN_mul(n,p,q,ctx))
+			printf("Error -- n\n");
+
+		BN_sub_word(p,1);//p=p-1
+		BN_sub_word(q,1);//q=q-1;
+		ret = BN_mul(exp,p,q,ctx);
+		d = BN_new();
+		if (!BN_mod_inverse(d,e,exp,ctx)) 
+			printf("Error -- d\n");
+
+		//设置用户身份i和秘密密钥g
+		i = BN_new();
+		strcpy(u,"23");
+		ret = BN_hex2bn(&i,u);
+		g = BN_new();
+		ret = BN_mod_exp(g,i,d,n,ctx);
+		BN_mod_mul(tmp,d,e,left,ctx);
+		//设置随机数r
+		r = BN_new();
+		ret = BN_rand(r,512,0,0);
+
+		//计算t
+		t = BN_new();
+		ret = BN_mod_exp(t,r,e,n,ctx);
+
+		//计算f(t,m)
+		strcpy(m,"hello");
+		len = sizeof(m)+BN_num_bytes(t)+10;
+		sANDt = malloc(len);
+		memset(sANDt,0,len);
+		BN_bn2bin(t,sANDt);
+		strcat(sANDt,m);
+		CreateHash(fHash,&ret,sANDt,len,HASH_MD5);
+		f = BN_new();
+		BN_bin2bn(fHash,ret,f);
+		//计算s
+		ret = BN_mod_exp(exp,r,f,n,ctx);
+		s = BN_new();
+		ret = BN_mod_mul(s,g,exp,n,ctx);
+		//接收方进行验证
+
+		ret = BN_mod_exp(exp,t,f,n,ctx);
+		ret = BN_mod_mul(right,i,exp,n,ctx);
+
+		ret = BN_mod_exp(left,s,e,n,ctx);
+		printf("cmp: %d\n", BN_cmp(left,right));
+
+
+		free(sANDt);
+		BN_free(left);
+		BN_free(right); 
+		BN_free(tmp);
+		BN_free(exp);
+		BN_free(f);
+		BN_free(i);
+		BN_free(e);
+		BN_free(t);
+		BN_free(s);
+		BN_free(r);
+		BN_free(d);
+		BN_free(g); 
+		BN_free(n); 
+		BN_free(p);
+		BN_free(q);  
+		BN_CTX_free(ctx); 
+		return 0;
+	}
 
 ## 参考资料
 
