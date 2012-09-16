@@ -181,6 +181,8 @@ int ShamirTest(){
 
 因为Shamir方案参数参数与RSA算法一样，所以可以利用Openssl中RSA相关函数更方便的生成参数n，e和d。
 
+<pre class="prettyprint lang-c">
+<table class="prettyprint-table"><tbody><tr><td>
 	rsa = RSA_generate_key(bits,RSA_3,NULL,NULL);
 	d = BN_new();
 	n = BN_new();
@@ -188,6 +190,8 @@ int ShamirTest(){
 	BN_copy(d,rsa->d);
 	BN_copy(n,rsa->n);
 	BN_copy(e,rsa->e);
+</td></tr></tbody></table>
+</pre>
 
 本文示例程序完整代码：[下载][3]
 
