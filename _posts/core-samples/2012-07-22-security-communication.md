@@ -43,6 +43,8 @@ ECB模式是最简单的运行模式，各个分组使用相同的密钥进行�
 
 ### 数据加密
 
+<pre class="prettyprint lang-cs">
+<table class="prettyprint-table"><tbody><tr><td>
     //创建RijndaelManaged实例
     RijndaelManaged RMCrypto = new RijndaelManaged();
     //byte[] key = RMCrypto.Key;
@@ -67,9 +69,13 @@ ECB模式是最简单的运行模式，各个分组使用相同的密钥进行�
     CryptStream.FlushFinalBlock();
     //把加密后的数据流转换成字节流
     byte[] encryptoByte = mStream.ToArray();
+</td></tr></tbody></table>
+</pre>
 
 ### 数据解密
 
+<pre class="prettyprint lang-cs">
+<table class="prettyprint-table"><tbody><tr><td>
     //创建一个MemoryStream实例，存放收到的加密数据字节流
     MemoryStream encryptoStream = new MemoryStream(encryptoByte);
     //创建RijndaelManaged实例
@@ -92,6 +98,8 @@ ECB模式是最简单的运行模式，各个分组使用相同的密钥进行�
     
     //输出解密后的消息.
     Console.WriteLine("The decrypted original message: {0}",SReader.ReadToEnd());
+</td></tr></tbody></table>
+</pre>
 
 ## 4. 数据传输
 
@@ -99,6 +107,8 @@ ECB模式是最简单的运行模式，各个分组使用相同的密钥进行�
 
 ### 客户端
 
+<pre class="prettyprint lang-cs">
+<table class="prettyprint-table"><tbody><tr><td>
     //创建TCP连接
     TcpClient TCP = new TcpClient("localhost", 11000);
 
@@ -114,10 +124,13 @@ ECB模式是最简单的运行模式，各个分组使用相同的密钥进行�
     NetStream.Write(encryptoByte, 0, encryptoByte.Length);
     Console.WriteLine("The encryptoed message: {0}", encryptBase64);
     Console.WriteLine("The message was sent.");
-
+</td></tr></tbody></table>
+</pre>
 
 ### 服务端
 
+<pre class="prettyprint lang-cs">
+<table class="prettyprint-table"><tbody><tr><td>
     //初始化TCPListen绑定IP地址和监听端口
     TcpListener TCPListen = new TcpListener(IPAddress.Any, 11000);
 
@@ -155,6 +168,8 @@ ECB模式是最简单的运行模式，各个分组使用相同的密钥进行�
     Console.WriteLine("The Encryptoed Message: {0}", encryptoString);
     //把Base64编码的字符串转换成字节流
     byte[] encryptoByte = Convert.FromBase64String(encryptoString);
+</td></tr></tbody></table>
+</pre>
 
 因CryptoStream类使用的派生自Stream的类进行初始化，所以在本示例程序中可以直接使用NetworStream替代MemoryStream创建CryptoStream实例。示例程序见[MSDN-加密数据][1]。示例程序使用MemoryStream是便于获得加密后的数据。
 

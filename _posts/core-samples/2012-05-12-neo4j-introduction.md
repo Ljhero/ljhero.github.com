@@ -63,6 +63,9 @@ Neo4j可以被安装成一个独立运行的服务端程序，客户端程序通
 现在利用图形数据库进行数据的储存，并获得user1 的粉丝，并为user4 推荐好友
 
 示例代码：
+
+<pre class="prettyprint lang-py">
+<table class="prettyprint-table"><tbody><tr><td>
 	#!/usr/bin/env python
 	# -*- coding: utf-8 -*-
 	#
@@ -120,6 +123,8 @@ Neo4j可以被安装成一个独立运行的服务端程序，客户端程序通
 	    node = row['fof']
 	    print node['name'] 
 	#输出结果：user1
+</td></tr></tbody></table>
+</pre>
 
 [pic1]: http://pic.yupoo.com/ljhero/BXYqXA4M/oyN6W.png
 [pic2]: http://pic.yupoo.com/ljhero/BXYqXE3K/adncn.png

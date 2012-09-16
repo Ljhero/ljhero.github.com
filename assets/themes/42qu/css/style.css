@@ -91,6 +91,9 @@ border: 1px dashed #CCCCCC;
 margin: 5px 0;
 padding: 8px 12px 8px 36px;
 }
+p code{
+  display: inline;
+}
 /* main */
 .wrapper{
 margin: 0 auto;
