@@ -1,4 +1,3 @@
-(function(document) {
-	hljs.tabReplace = '    '
-	hljs.initHighlighting();
-}(document));
+(function(window) {
+window.onload = function(){ prettyPrint(); }
+}(window));
