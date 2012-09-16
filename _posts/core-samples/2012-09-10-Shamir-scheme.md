@@ -176,7 +176,7 @@ int ShamirTest(){
 	BN_CTX_free(ctx); 
 	return 0;
 }
-</td></tr><tbody>
+</td></tr></tbody></table>
 </pre>
 
 因为Shamir方案参数参数与RSA算法一样，所以可以利用Openssl中RSA相关函数更方便的生成参数n，e和d。
