@@ -23,8 +23,10 @@ h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:500;}
 
 
 body{
-font-family: Georgia, "Hiragino Sans GB", "Helvetica Neue", Helvetica, Arial, Sans;
-font-size:15px;
+color: #444;
+font-size: 16px;
+line-height: 1.8;
+font-family: Georgia,Times,"Times New Roman",serif;
 }
 h1, h2, h3, h4, h5, p {
     margin: 10px 0;
@@ -49,12 +51,25 @@ h4 {
 h5 {
     font-size: 18px;
 }
-a{
-color: #01A;
+a {
+color: #3354AA;
 text-decoration: none;
 }
-a:hover{
-color: #D10;	
+a:hover {
+color: #444;
+border-bottom: none;
+}
+
+pre, code, tt {
+    font: 14px 'andale mono', 'lucida console', monospace; line-height: 1.5;
+}
+code { margin-bottom: 20px; }
+pre, code {
+display: block;
+overflow-x: auto;
+background: #f4f4f4;
+padding: 5px 5px;
+border: 1px solid #eee;
 }
 ul {
 list-style: none;
@@ -64,67 +79,17 @@ padding: 0;
 p{
 line-height: 25px;
 }
-p code, li code {
-    display: inline-block;
-    white-space: no-wrap;
-    background: #000;
-    color: #f8f8f8;
-    font-size: .8em;
-    line-height: 1.5em;
-    border: 1px solid #222;
-    -moz-border-radius: 0.4em;
-    -webkit-border-radius: 0.4em;
-    -o-border-radius: 0.4em;
-    -ms-border-radius: 0.4em;
-    -khtml-border-radius: 0.4em;
-    border-radius: 0.4em;
-    padding: 0 .3em;
-    margin: -1px 0;
-}
-pre {
-    display: block;
-    overflow-x: auto;
-    overflow-y: hidden;
-    background: #000;
-    color: #f8f8f8;
-    font-family: 'Consolas', 'Menlo', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
-    font-size: 0.9em;
-    word-wrap: break-word;
-    white-space: pre-wrap;
-    max-width: 100%;
-    padding: 0.5em 1em;
-    border: 1px solid #222;
-    -moz-border-radius: 0.4em;
-    -webkit-border-radius: 0.4em;
-    -o-border-radius: 0.4em;
-    -ms-border-radius: 0.4em;
-    -khtml-border-radius: 0.4em;
-    border-radius: 0.4em;
-}
-blockquote {
-    border-left:.5em solid #eee;
-    padding: 0 2em;
-    margin-left:0;
-    max-width: 476px;
-}
-blockquote  cite {
-    font-size:14px;
-    line-height:20px;
-    color:#bfbfbf;
-}
-blockquote cite:before {
-    content: '\2014 \00A0';
-}
 
-blockquote p {  
-    color: #666;
-    max-width: 460px;
-}
-hr {
-    width: 540px;
-    text-align: left;
-    margin: 0 auto 0 0;
-    color: #999;
+blockquote:before, blockquote:after, q:before, q:after { content: ""; }
+blockquote, q { quotes: "" ""; }
+
+blockquote  { 
+color: #666;
+font-style: italic;
+background: #F4F5F7;
+border: 1px dashed #CCCCCC;
+margin: 5px 0;
+padding: 8px 12px 8px 36px;
 }
 /* main */
 .wrapper{
