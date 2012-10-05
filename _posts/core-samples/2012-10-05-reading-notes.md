@@ -77,6 +77,7 @@ Linux的系统调用的C语言形式被定义在 unistd.h中，应用程序可�
 
 **Windows API** （Win32是使用最广泛也是最成熟的版本）是Windows操作系统提供给应用程序开发者的最底层、最直接与Windows打交道的接口。CRT是建立在Windows API之上的。MFC是对API一种C++形式的封装库。头文件"Windows.h"包含了Windows API的核心部分。
 
+![][img05]
 
 [img01]:http://pic.yupoo.com/ljhero/CfWqMUzk/93bDv.png
 [img02]:http://pic.yupoo.com/ljhero/CfWuQRfD/yokIw.png
