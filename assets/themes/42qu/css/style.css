@@ -207,15 +207,17 @@ list-style: disc;
 margin-bottom: 10px;
 list-style: circle;
 }
-.tag_box li{
-display: inline-block;
+.post-tages{
 float: left;
+width: 220px;
 }
-.tag_box li.clearfloat{
-    float: none;
+.post-tages li{
+float: left;
+display: inline;
+line-height: 25px;
 }
-.tag_box li a{
-padding: 0 2px;
+
+.post-tages li a{
 text-decoration: underline;
 }
 .post-date{

@@ -2,12 +2,12 @@
 <div class="post">
     {{ content }}
 </div>
-<div class="post-date left">
+<div class="post-date">
     <p>Posted on {{ page.date | date_to_long_string }}</p>
   </div>
-  <div class="post-tages right">
+  <div class="post-tages  clearfloat">
         {% unless page.tags == empty %}
-            <ul class="tag_box">
+            <ul>
             {% assign tags_list = page.tags %}
             {% include JB/tags_list %}
             </ul>
