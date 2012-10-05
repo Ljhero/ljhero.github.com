@@ -10,7 +10,10 @@ published: false
 从编译，链接到运行，程序员应该了解自己所写的代码最终是怎么成为程序，又怎样在计算机上运行起来的。另不得不对作者能在硕士期间就能写出此书感到佩服。精读此书需要花些功夫，当然肯定能从中收获很多。我对此书也只是泛读，主要是想了解编译，链接及程序在内存中运行整个实现原理。本篇笔记主要记录自己在读此书过程中一些概念上有误解或不清晰的地方。
 
 ## 编译和链接
+
 IDE一般将编译和链接的过程一步完成，通常将这种编译和链接合并到一起的过程称为构建（Build） 
+
+![][img01]
 
 ### 预编译（Prepressing）
 
@@ -68,5 +71,13 @@ Linux的系统调用的C语言形式被定义在 unistd.h中，应用程序可�
 
 **Windows API** （Win32是使用最广泛也是最成熟的版本）是Windows操作系统提供给应用程序开发者的最底层、最直接与Windows打交道的接口。CRT是建立在Windows API之上的。MFC是对API一种C++形式的封装库。头文件"Windows.h"包含了Windows API的核心部分。
 
-    
+
+[img01]:http://pic.yupoo.com/ljhero/CfWqMUzk/93bDv.png
+[img02]:http://pic.yupoo.com/ljhero/CfWuQRfD/yokIw.png
+[img03]:http://pic.yupoo.com/ljhero/CfWqMXq5/TQwaV.png
+[img04]:http://pic.yupoo.com/ljhero/CfWqMYlo/ozlL3.png
+[img05]:http://pic.yupoo.com/ljhero/CfWtlflz/PvtLv.png
+[img06]:http://pic.yupoo.com/ljhero/CfWqMZ9y/XpP4o.png
+[img07]:http://pic.yupoo.com/ljhero/CfWqMZYD/gOblC.png
+[img08]:http://pic.yupoo.com/ljhero/CfWtlhUj/eLsWo.png
     
