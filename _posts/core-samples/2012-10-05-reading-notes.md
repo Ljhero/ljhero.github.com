@@ -79,12 +79,8 @@ Linux的系统调用的C语言形式被定义在 unistd.h中，应用程序可�
 
 ![][img05]
 
-[img01]:http://pic.yupoo.com/ljhero/CfWqMUzk/93bDv.png
-[img02]:http://pic.yupoo.com/ljhero/CfWuQRfD/yokIw.png
-[img03]:http://pic.yupoo.com/ljhero/CfWqMXq5/TQwaV.png
-[img04]:http://pic.yupoo.com/ljhero/CfWqMYlo/ozlL3.png
-[img05]:http://pic.yupoo.com/ljhero/CfWtlflz/PvtLv.png
-[img06]:http://pic.yupoo.com/ljhero/CfWqMZ9y/XpP4o.png
-[img07]:http://pic.yupoo.com/ljhero/CfWqMZYD/gOblC.png
-[img08]:http://pic.yupoo.com/ljhero/CfWtlhUj/eLsWo.png
-    
+[img01]:http://pic.yupoo.com/ljhero/CjLBIYR3/EzotR.png
+[img02]:http://pic.yupoo.com/ljhero/CjLBJ3cc/XEa4W.png
+[img03]:http://pic.yupoo.com/ljhero/CjLBJ4oB/WXvzo.png
+[img04]:http://pic.yupoo.com/ljhero/CjLBJ6al/36ryq.png
+[img05]:http://pic.yupoo.com/ljhero/CjLBJ7LV/AB1Wx.png
