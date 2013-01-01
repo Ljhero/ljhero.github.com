@@ -209,6 +209,9 @@ list-style: disc;
 margin-bottom: 10px;
 list-style: decimal;
 }
+.post li{
+  text-indent: none;
+}
 .post-tages{
 float: left;
 }
