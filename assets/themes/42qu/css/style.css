@@ -53,11 +53,12 @@ h5 {
 }
 a {
 color: #3354AA;
+border-bottom-width: 1px;
+border-bottom-style: dashed;
 text-decoration: none;
 }
 a:hover {
-color: #444;
-border-bottom: none;
+color: #F30;
 }
 
 pre, code, tt {
@@ -208,7 +209,7 @@ list-style: disc;
 }
 .post ol li{
 margin-bottom: 10px;
-list-style: circle;
+list-style: decimal;
 }
 .post-tages{
 float: left;
