@@ -5,6 +5,7 @@ category : Notes
 tags : [书影生活]
 published: true
 ---
+![](http://movie.douban.com/photos/photo/1672052776/#next_photo)
 
 在看了《壁花少年》的预告片之后，喜欢上了[《It's time》][1]这首歌，也对这部讲述青春期少年少女们的成长之路的电影产生了好感。
 
