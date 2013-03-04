@@ -34,3 +34,32 @@ published: true
 
 5. [《黑客与画家》](http://book.douban.com/subject/6021440/)  
 懂得思考的程序员，写出的程序才能具有更持久的生命力。
+
+##  == 影 ==
+### 概览
+2012年共看过67部电影。其中五星电影26部, 6月最消遣看了17部, 平均 5.45天一部电影。
+当然其中也有些是以前看过，但是在2012年内标记上的。看的也大部分是经典的老电影，当年内出的电影所在比例甚少。
+
+![](http://pic.yupoo.com/ljhero/CGw6klB9/FIkGS.png)
+
+### 年度个人Top 5
+1. [壁花少年 The Perks of Being a Wallflower](http://movie.douban.com/subject/4847665/)  
+成长之路为什么都是如此坎坷？
+
+2. [少年派的奇幻漂流](http://movie.douban.com/subject/1929463/)  
+理性与信仰，兽性与人性。
+
+3. [神探夏洛克 第二季](http://movie.douban.com/subject/6522269/)  
+才智与激情。
+
+4. [舌尖上的中国](http://movie.douban.com/subject/10606004/)  
+美食关键在于制作美食的人。
+
+5. [人再囧途之泰囧](http://movie.douban.com/subject/10574622/)  
+无它，只管笑。
+
+注：只选2012年播出的电影与电视剧。
+
+![](http://pic.yupoo.com/ljhero/CGw6HPnj/medium.jpg)
+
+感谢统计工具：[阅读DNA](http://www.yuedudna.com/)
