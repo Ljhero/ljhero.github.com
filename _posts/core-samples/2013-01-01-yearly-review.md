@@ -60,6 +60,6 @@ published: true
 
 注：只选2012年播出的电影与电视剧。
 
-![](http://pic.yupoo.com/ljhero/CGw6HPnj/medium.jpg)
+![](http://pic.yupoo.com/ljhero/CGw6HPnj/DpA0b.png)
 
 感谢统计工具：[阅读DNA](http://www.yuedudna.com/)
