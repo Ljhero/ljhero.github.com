@@ -189,6 +189,16 @@ border-top: 1px dotted #CCC;
 .about-me p.link a{
 margin-right: 7px;
 }
+
+.side-bar .categories-list{
+padding: 10px 20px;
+}
+
+.side-bar .categories-list h3{
+padding: 7px 10px;
+border-bottom: 1px dotted #CCC;
+margin:0;
+}
 /* post */
 .post{
 margin-bottom:10px;
