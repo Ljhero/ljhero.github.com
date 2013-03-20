@@ -26,7 +26,9 @@ published: true
                 //用己方私钥签名数据
                 sendData.SignData = Sign.SignData(data);
                 //组装原始数据与签名数据
-                string encryptString = Convert.ToBase64String(sendData.SendData) + ClassUtility.Separator + Convert.ToBase64String(sendData.SignData);
+                string encryptString = Convert.ToBase64String(sendData.SendData) + 
+                                       ClassUtility.Separator + 
+                                       Convert.ToBase64String(sendData.SignData);
                 //加密发送数据
                 full = SCrypto.Encrypt(Encoding.ASCII.GetBytes(encryptString));
 
