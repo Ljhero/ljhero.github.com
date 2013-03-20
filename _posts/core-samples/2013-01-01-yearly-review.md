@@ -1,7 +1,7 @@
 ---
 title: Yearly Review @2012
 layout: post
-category : Notes
+category : 个人生活
 tags : [书影生活]
 published: true
 ---

@@ -1,7 +1,7 @@
 ---
 title: 一次网络程序Debug过程
 layout: post
-category : Program
+category : 程序设计
 tags : [C#, 编程实践]
 published: true
 ---

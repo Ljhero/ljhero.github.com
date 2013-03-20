@@ -1,7 +1,7 @@
 ---
 title: 《壁花少年》：We are infinite
 layout: post
-category : Notes
+category : 个人生活
 tags : [书影生活]
 published: true
 ---

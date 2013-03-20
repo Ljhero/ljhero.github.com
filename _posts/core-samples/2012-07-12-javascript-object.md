@@ -1,7 +1,7 @@
 ---
 title: 面向对象的Javascript
 layout: post
-category : web
+category : web开发
 tags : [Javascript, 面向对象]
 published: true
 ---

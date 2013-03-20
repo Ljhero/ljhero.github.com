@@ -1,7 +1,7 @@
 ---
 title: 支持多线程的日志记录类实现
 layout: post
-category : Program
+category : 程序设计
 tags : [C#, 编程实践]
 published: true
 ---

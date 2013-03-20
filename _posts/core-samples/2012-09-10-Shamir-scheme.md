@@ -1,7 +1,7 @@
 ---
 title: 基于OpenSSL简单实现Shamir基于身份的数字签名算法
 layout: post
-category : Program
+category : 程序设计
 tags : [C, 密码算法]
 published: true
 ---

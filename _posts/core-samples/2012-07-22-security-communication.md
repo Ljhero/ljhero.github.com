@@ -1,7 +1,7 @@
 ---
 title: C#实现网络传输数据加密
 layout: post
-category : Program
+category : 程序设计
 tags : [C#, 密码算法]
 published: true
 ---
