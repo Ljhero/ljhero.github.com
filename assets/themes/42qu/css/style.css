@@ -203,9 +203,11 @@ margin:0;
 .post{
 margin-bottom:10px;
 }
+/*
 .post p{
   text-indent: 2em;
 }
+*/
 .post img {
 max-width: 650px;
 display: block;
