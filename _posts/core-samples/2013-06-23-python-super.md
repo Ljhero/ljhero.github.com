@@ -10,14 +10,14 @@ published: true
 
 'super'是python的内建方法，可直接使用。官方文档解释：
 
-> super(type[, object-of-type])
+> super(type[, object-of-type])  
 > "Return a proxy object that delegates method calls to a parent or sibling
 class of type"
 
-关键之处在于三方面：
-1. 方法返回一个新的类型对象（super类型），起的是代理。
-2. 新的对象中的属性都是原类型所具有的。
-3. 代理对象所具有的属性是**排除了**传入的*type*类型自身特有的属性。
+关键之处在于三方面:  
+1. 方法返回一个新的类型对象（super类型），起的是代理。  
+2. 新的对象中的属性都是原类型所具有的。  
+3. 代理对象所具有的属性是**排除了**传入的*type*类型自身特有的属性。  
 
 ## 使用示例
 
@@ -88,4 +88,4 @@ A4392326160
 </td></tr></tbody></table>
 </pre>
 
-按继承的先后关系，先调用了B类中的*__init__*方法，在类B的*__init__*方法中，使用super排除了*self*也就是C类实例中继承自B的方法，此后调用的是继承自A类中*__init__*，而不是B类的父类也就*object*中的*__init__*方法。
+按继承的先后关系，先调用了B类中的\__init__方法，在类B的\__init__方法中，使用super排除了*self*也就是C类实例中继承自B的方法，此后调用的是继承自A类中\__init__，而不是B类的父类也就*object*中的\__init__方法。
