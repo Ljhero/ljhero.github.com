@@ -10,7 +10,7 @@ Mac下安装软件，首先想到的是到App Store搜索，再点击进行下�
 
 当使用过GNU/Linux系统下的软件包管理工具yum或apt-get，就感觉多点几下还是有点多余，本着**一条命令能解决的事，绝不多操作**的想法，发现了[Homebre-cask](https://github.com/phinze/homebrew-cask)，一个Mac下的命令行式软件管理程序。
 
-Homebrew-cask是在[homebrew](http://brew.sh/index_zh-cn.html)的基础上实现了一个外部命令*brew*，使得基于*brew*命令的软件管理更加简便。
+Homebrew-cask是在[homebrew](http://brew.sh/index_zh-cn.html)的基础上实现了一个外部命令*cask*，使得基于*brew*命令的软件管理更加简便。
 
 在terminal下输入如下命令就能自动安装上Evernote:
 	
@@ -72,5 +72,5 @@ Homebrew是基于git和ruby，而两个软件Mac都是预装的，所以安装�
 
 	brew cask uninstall vagrant
 
-详细的使用说明，可以查看cask的[USAGE文档](https://github.com/phinze/homebrew-cask/blob/master/USAGE.md)。软件安装与管理是不一下变的很简单，使用homebrew-cask可以安装大部分软件，特别是开源软件，但还是会遇到要安装的软件search不到，这说明软件源中并没有存在此软件的cask，如果你从网下载到了软件的安装包，自己可以创建此软件的cask，然后提交到homebrew-cask项目中，也算是为开源社区做出贡献，具体怎么操作请查看[How to Contribute](https://github.com/phinze/homebrew-cask/blob/master/CONTRIBUTING.md)。
+详细的使用说明，可以查看cask的[USAGE文档](https://github.com/phinze/homebrew-cask/blob/master/USAGE.md)。软件安装与管理是不一下变的很简单，使用homebrew-cask可以安装大部分软件，特别是开源软件，但还是会遇到要安装的软件search不到，这说明软件源中并没有存在此软件的cask，如果你从网下载到了软件的安装包，自己可以创建此软件的cask，然后提交到homebrew-cask项目中，也算是为开源项目做贡献，具体怎么操作请查看[How to Contribute](https://github.com/phinze/homebrew-cask/blob/master/CONTRIBUTING.md)。
 
