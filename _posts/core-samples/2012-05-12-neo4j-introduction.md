@@ -50,8 +50,12 @@ Neo4j可以被安装成一个独立运行的服务端程序，客户端程序通
 **第二步：安装 neo4j-embedded**
 
 如果安装了python的包管理工具 pip 或者 easy_install 可直接运行
-	Pip install neo4j-embedded  
-	easy_install neo4j-embedded
+
+{% highlight bash %}
+pip install neo4j-embedded  
+easy_install neo4j-embedded
+{% endhighlight %}	
+
 也可以从[http://pypi.python.org/pypi/neo4j-embedded/](http://pypi.python.org/pypi/neo4j-embedded/)下载相应的安装包完成安装。
 
 ## Neo4j使用实例 
@@ -64,8 +68,7 @@ Neo4j可以被安装成一个独立运行的服务端程序，客户端程序通
 
 示例代码：
 
-<pre class="prettyprint lang-py">
-<table class="prettyprint-table"><tbody><tr><td>
+{% highlight python %}
 	#!/usr/bin/env python
 	# -*- coding: utf-8 -*-
 	#
@@ -123,8 +126,7 @@ Neo4j可以被安装成一个独立运行的服务端程序，客户端程序通
 	    node = row['fof']
 	    print node['name'] 
 	#输出结果：user1
-</td></tr></tbody></table>
-</pre>
+{% endhighlight %}	
 
 [pic1]: http://pic.yupoo.com/ljhero/BXYqXA4M/oyN6W.png
 [pic2]: http://pic.yupoo.com/ljhero/BXYqXE3K/adncn.png

@@ -17,8 +17,7 @@ published: true
 
 该类的定义与使用参照[《如何：对制造者线程和使用者线程进行同步》](http://dwz.cn/63p36)
 
-<pre class="prettyprint lang-cs">
-<table class="prettyprint-table"><tbody><tr><td>
+{% highlight csharp %}
     public class SyncEvents
     {
         private EventWaitHandle _newItemEvent;      //添加新项
@@ -48,8 +47,7 @@ published: true
             get { return _eventArray; }
         }       
     }
-</td></tr></tbody></table>
-</pre>
+{% endhighlight %}	
 
 对新记录的添加使用 AutoResetEvent 类，输出端线程在响应此事件后，此事件能自动重置。将 ManualResetEvent 类用于通知线程退出，该事件被设置后无论是向共享队列中添加日志记录的输入端线程还是从共享队列中取日志记录的输出端线程都能响应此事件，从而正常退出。
 
@@ -57,8 +55,7 @@ published: true
 
 共享队列中存放的就是日志信息类的实例对象，可以根据实际需要对此类中的属性进行增加与修改，这并不影响下面将要介绍的日志记录类正常使用。
 
-<pre class="prettyprint lang-cs">
-<table class="prettyprint-table"><tbody><tr><td>
+{% highlight csharp %}
     public class LogInfo
     {
         private int _ID;
@@ -82,15 +79,13 @@ published: true
             set { _Content = value; }
         }
     }
-</td></tr></tbody></table>
-</pre>
+{% endhighlight %}	
 
 ### 3. 日志记录类
 
 类中属性与构造函数
 
-<pre class="prettyprint lang-cs">
-<table class="prettyprint-table"><tbody><tr><td>
+{% highlight csharp %}
     public class Logger
     {
         private static Logger _logger;
@@ -123,15 +118,13 @@ published: true
             return _logger;
         }
     }
-</td></tr></tbody></table>
-</pre>
+{% endhighlight %}	
 
 为了保证共享队列唯一，此类实现采用了单例模式，实现方式是通过定义一个静态的自身logger变量，私有化默认的构造函数，提供一个得到Logger实例的GetLogger方法。这样不能通过new直接创建Logger实例，只能通过GetLogger方法获得，在该方法中就可以通过判断是否已创建了Logger实例，如果已创建则返回已有的，从而保证Logger实例的唯一。
 
 添加日志方法
 
-<pre class="prettyprint lang-cs">
-<table class="prettyprint-table"><tbody><tr><td>
+{% highlight csharp %}
         private void AddLog(Object obj)
         {
             LogInfo log = obj as LogInfo;
@@ -155,16 +148,14 @@ published: true
             Thread t = new Thread(AddLog);
             t.Start(log);
         }
-</td></tr></tbody></table>
-</pre>
+{% endhighlight %}	
 
 首先检查“退出线程”事件，因为 WaitOne 使用的第一个参数为零，该方法会立即返回，所以检查该事件的状态不会阻止当前线程。接着往共享队列中添加日志记录并设置“添加新项”事件，此事件设置后会让因共享队列为空而一直在等待的输出线程继续运行，处理共享队列中的新日志记录。
 日志添加通过调用Add方法，启动一个新线程运行AddLog方法向共享队列中添加新日志。
 
 日志输出方法
 
-<pre class="prettyprint lang-cs">
-<table class="prettyprint-table"><tbody><tr><td>
+{% highlight csharp %}
         /// <summary>
         /// 日志保存
         /// </summary>
@@ -198,29 +189,25 @@ published: true
             _thread = new Thread(Save);
             _thread.Start();
         }
-</td></tr></tbody></table>
-</pre>
+{% endhighlight %}	
 
 输出线程主要运行的就是日志保存方法，通过while循环逐个处理共享队列中的日志记录。如果队列为空，则线程暂停进入等待状态，等待“添加新项”事件或“退出线程”事件，两个事件只要有一个被设置则线程继续运行，如果是“退出线程”事件，则设置flag为-1，退出循环线程结束，因为只有在队列为空时才等待“退出线程”事件，这样保证线程退出前队列中的所有的日志记录都被处理。
 在程序开始处就运行Run方法，会启动一个新线程运行Save方法，这样只要一添加日志就能自动的被处理。
 
 线程结束方法
 
-<pre class="prettyprint lang-cs">
-<table class="prettyprint-table"><tbody><tr><td>
+{% highlight csharp %}
         public void Stop()
         {
             _syncEvents.ExitThreadEvent.Set();
         }
-</td></tr></tbody></table>
-</pre>
+{% endhighlight %}	
 
 通过设置“退出线程”事件，让正在运行的输入线程和输出线程都自动结束运行。
 
 ### 4. 使用示例
 
-<pre class="prettyprint lang-cs">
-<table class="prettyprint-table"><tbody><tr><td>
+{% highlight csharp %}
     class Program
     {
         static void Main(string[] args)
@@ -244,5 +231,4 @@ published: true
             Console.ReadLine();
         }
     }
-</td></tr></tbody></table>
-</pre>
+{% endhighlight %}	

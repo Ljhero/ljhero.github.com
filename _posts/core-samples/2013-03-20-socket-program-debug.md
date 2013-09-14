@@ -10,8 +10,7 @@ published: true
 最近在用C#实现一个安全通信软件，基本思想是发送方在发送数据时先对数据进行加密再发送，同样接收方从网络上收到数据后先对数据进行解密再把解密后的数据递交到上层应用。
 实现方式是通过封装TCPCLient类的一些方法，向外提供封装好的安全SOCKET，自动完成数据的加解密。上层应用只需调用安全SOCKET进行原始数据的发送与接收并不用关心底层数据的加解密，使用方式与使用系统原始的SOCKET一样。
 
-<pre class="prettyprint lang-cs">
-<table class="prettyprint-table"><tbody><tr><td>
+{% highlight csharp %}
     public int Send(byte[] data)
     {
         try
@@ -87,8 +86,7 @@ published: true
 
         return data;
     }
-</td></tr></tbody></table>
-</pre>
+{% endhighlight %}	
 
 ## 错误
 
@@ -100,8 +98,7 @@ published: true
 
 引起错误的可疑之处也缩小到了解密数据前的ReceiveSource函数，该函数的作用是从连接的缓冲区中读取原始的数据。函数要达到的预期效果是能把一次交互过程中发送方发送的数据都能接收到，所以实现的代码也是循环判断缓冲区中是否有数据，有就读出来。
 
-<pre class="prettyprint lang-cs">
-<table class="prettyprint-table"><tbody><tr><td>
+{% highlight csharp %}
         public byte[] ReceiveSource()
         {
             int len = 0;
@@ -128,8 +125,7 @@ published: true
             }
             return receive;
         }
-</td></tr></tbody></table>
-</pre>
+{% endhighlight %}	
 
 通过调试，发现了这个函数并没有达到预期的效果，当发送的数据量很大时，有时没有返回完整的数据。之后通过wireshark抓到了发送过来的数据包，也确定了数据确实是完整发送过来了只是程序没有读取出来，再分析代码确认函数在循环读取数据时考虑不周全，如果发送的数据量很大，网络上实际需要多个TCP数据包进行发送，这样数据包通过网络到达接收端时前后肯定会有一定的延迟，所以数据到达接收方缓冲区也有一定的时间差，在循环读取时有可能刚好已经读了一些数据但下一个数据包的数据还未到达，此时缓冲区也没有新的数据也就退出了循环，造成了接收方收到的数据不全。
 
@@ -137,8 +133,7 @@ published: true
 
 既然问题是接收方有可能接收不到完整的数据，易想到的解决办法就是发送数据之前就先通知接收方将要发送的数据长度，接收方首先收到要接收的数据长度值，再循环从缓存区读取数据，直到接收到指定长度的数据才返回。
 
-<pre class="prettyprint lang-cs">
-<table class="prettyprint-table"><tbody><tr><td>
+{% highlight csharp %}
         public int SendSource(byte[] data)
         {
             NetworkStream NetStream = Client.GetStream();
@@ -172,5 +167,4 @@ published: true
             
              return receive;
           }        
-</td></tr></tbody></table>
-</pre>
+{% endhighlight %}	

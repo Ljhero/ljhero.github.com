@@ -23,8 +23,7 @@ class of type"
 
 ### 调用父类方法
 
-<pre class="prettyprint lang-python">
-<table class="prettyprint-table"><tbody><tr><td>
+{% highlight py %}
 class A(object):
     def __init__(self):
         print 'A'+ str(id(self))
@@ -40,23 +39,19 @@ class B(A):
 
 if __name__ == '__main__':
     b = B()
-</td></tr></tbody></table>
-</pre>
+{% endhighlight %}	
 
 输出为
-<pre class="prettyprint lang-python">
-<table class="prettyprint-table"><tbody><tr><td>
+{% highlight bash %}
 B4306232080
 A
 A4306232080
-</td></tr></tbody></table>
-</pre>
+{% endhighlight %}	
 在类B中成功调用了父类A中的*who*方法，*self*两次输出的id一样表明，使用super调用时传入的任然是子类的实例，体现了super本身只是起到代理作用。
 
 ### 多重继承时调用兄弟类中的方法
 
-<pre class="prettyprint lang-python">
-<table class="prettyprint-table"><tbody><tr><td>
+{% highlight py %}
 class A(object):
     def __init__(self):
         print 'A'+ str(id(self))
@@ -76,16 +71,13 @@ class C(B, A):
         
 if __name__ == '__main__':
     c = C()
-</td></tr></tbody></table>
-</pre>
+{% endhighlight %}	
 
 输出为
 
-<pre class="prettyprint lang-python">
-<table class="prettyprint-table"><tbody><tr><td>
+{% highlight bash %}
 C4392326160
 A4392326160
-</td></tr></tbody></table>
-</pre>
+{% endhighlight %}	
 
 按继承的先后关系，先调用了B类中的\__init\__方法，在类B的\__init\__方法中，使用super排除了*self*也就是C类实例中继承自B的方法，此后调用的是继承自A类中\__init\__，而不是B类的父类也就*object*中的\__init\__方法。
