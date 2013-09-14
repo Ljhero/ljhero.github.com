@@ -13,32 +13,27 @@ Javascript虽然称不上一种严格意义上的面向对象语言，例如没�
 
 使用Object，创建Object的实例，然后向其中添加内容。Object是Javascript中所有对象的基类。
 
-<pre class="prettyprint lang-js">
-<table class="prettyprint-table"><tbody><tr><td>
+{% highlight javascript %}
     var newObject = new Object(); //创建实例
     newObject.firstName = "frank"; //添加firstName属性
     //添加sayName方法
     newObject.sayName = function() {
       alert(this.firstName);
     }
-</td></tr></tbody></table>
-</pre>
+{% endhighlight %}	
 
 在Javascript中，不必为一个对象实例创建类或模板，可以像上例所示那样直接创建对象实例，并且可以在任何时候给该对象实例添加属性和方法。
 
 事实上，Javascript的实现只是把所有的对象当做关联数组。然后给数组加上了一个面具，使它的语法看起来更像Java或C++，使用点分隔表示方法。但实际上任然可以用获取数组元素的方式取得对象中的元素。
 
-<pre class="prettyprint lang-js">
-<table class="prettyprint-table"><tbody><tr><td>
+{% highlight javascript %}
     var name = newObject["firstName"];
     newObject["sayName"]();
-</td></tr></tbody></table>
-</pre>
+{% endhighlight %}	
 
 这个简单的东西可以算是很多强大功能的基础。比如，依据某种逻辑调用某个对象的方法：
 
-<pre class="prettyprint lang-js">
-<table class="prettyprint-table"><tbody><tr><td>
+{% highlight javascript %}
     function sayLoudly(){
     	alert(this.firstName.toUpperCase());
     }
@@ -54,8 +49,7 @@ Javascript虽然称不上一种严格意义上的面向对象语言，例如没�
     };
     
     newObject[whatFunction](); 
-</td></tr></tbody></table>
-</pre>
+{% endhighlight %}	
 
 根据`whatVolume`的值可以调用对象中不同的方法，在上述代码中对象`sayLoudly`方法的添加，体现了向一个对象添加函数的时候，可以使用已存在的函数。`sayLoudly`函数中`this`所指向的对象将会在运行时动态计算，不同对象调用时其所指向也就不同。这种运行时绑定也是Javascript面向对象实现的一个非常强大的特性，它允许代码的共享，本质上来说，是一种继承的形式。
 
@@ -63,8 +57,7 @@ Javascript虽然称不上一种严格意义上的面向对象语言，例如没�
 
 因Javascript里的对象实质是关联数组，所以使得使用JSON创建对象的方法可行。
 
-<pre class="prettyprint lang-js">
-<table class="prettyprint-table"><tbody><tr><td>
+{% highlight javascript %}
     var newObject = {
     	firstName = "Ljhero",
     	sayName: function() {
@@ -72,13 +65,11 @@ Javascript虽然称不上一种严格意义上的面向对象语言，例如没�
 	      },
 	    sayLoudly: sayLoudly
     };
-</td></tr></tbody></table>
-</pre>
+{% endhighlight %}	
 
 使用JSON定义和定义一个数组非常相似，除了使用花括号而不是方括号，函数可以是内联的，也可以是外部函数。在JSON中，可以随意地嵌套对象定义来创建对象的层级关系。例如：
 
-<pre class="prettyprint lang-js">
-<table class="prettyprint-table"><tbody><tr><td>
+{% highlight javascript %}
     var newObject = {
     	firstName = "Ljhero",
     	sayName: function() {
@@ -92,15 +83,13 @@ Javascript虽然称不上一种严格意义上的面向对象语言，例如没�
     };
 
     newObject.LastName.sayName();
-</td></tr></tbody></table>
-</pre>
+{% endhighlight %}	
 
 ### 3. 使用类的定义
 
 在Javascript中，函数也是一个对象，故可以把一个函数当做类的构造函数来提供服务。这样就可以很方便的创建类的多个实例对象。
 
-<pre class="prettyprint lang-js">
-<table class="prettyprint-table"><tbody><tr><td>
+{% highlight javascript %}
     function Person(name){
     	this.name = name;
     	this.sayName = function(){
@@ -113,8 +102,7 @@ Javascript虽然称不上一种严格意义上的面向对象语言，例如没�
 
     var two = new Person("LJHERO");
     two.sayName();
-</td></tr></tbody></table>
-</pre>
+{% endhighlight %}	
 
 在定义`Person`类之后，其后创建的实例对象`one`，`two`都具有相同的属性和方法。但是由此引出的一个问题是，`Person`类的每个实例都含有`name`的一个副本和`sayName()`方法的一个副本，那么每个实例占用了更多的内存。如果所有的实例能共享`sayName()`这样相同的副本的话，就能节省些内存。随后介绍的prototype就是这样的方法。
 
@@ -122,8 +110,7 @@ Javascript虽然称不上一种严格意义上的面向对象语言，例如没�
 
 Javascript中的每一个独立的对象都有一个与之关联的原型（prototype）属性，可以看作一个简化的继承形式。其工作方式是：当你构造一个对象的新实例时，定义在对象原型中的所有属性和方法，在运行时都会附着在那个新的实例上。
 
-<pre class="prettyprint lang-js">
-<table class="prettyprint-table"><tbody><tr><td>
+{% highlight javascript %}
     function Person(name){
     	this.name = name;
     }
@@ -134,8 +121,7 @@ Javascript中的每一个独立的对象都有一个与之关联的原型（prot
 
     var p = new Person("ljhero");
     p.sayName();
-</td></tr></tbody></table>
-</pre>
+{% endhighlight %}	
 
 这样无论创建多少个`Person`实例，在内存中`sayName()`函数只会有一个单独的实例。这个方法实际上是附加在每个实例上，而且this关键字也是在运行时绑定，跟方法1中sayLoudly函数相同。
 
@@ -154,8 +140,7 @@ Javascript中的每一个独立的对象都有一个与之关联的原型（prot
  
 这是运用了Javascript的国际标准ECMAScript第五版（目前通行的是第三版），提出的一个新的方法Object.create()。 
 
-<pre class="prettyprint lang-js">
-<table class="prettyprint-table"><tbody><tr><td>
+{% highlight javascript %}
     var Person = {
     	name: "ljhero",
     	sayName: function(){
@@ -165,8 +150,7 @@ Javascript中的每一个独立的对象都有一个与之关联的原型（prot
 
     var p = Object.create(Person);
     p.sayName();
-</td></tr></tbody></table>
-</pre>
+{% endhighlight %}	
 
 * **极简主义法**
 
@@ -177,14 +161,12 @@ Javascript中的每一个独立的对象都有一个与之关联的原型（prot
 方法1和2，都是创建单个的实例对象，也就是说如果你想创建相似的对象，就得重新编写相同的创建实例代码。如果想要创建一个类，这个类非常大，而且可能有很多复杂的实例，那么使用原型方法是最佳的选择，能带来最好的内存使用效率。当然如果想要实现完全的面向对象编程，极简主义法可以满足你的要求。
 如果你的对象层级关系嵌套层次很多或你需要一个动态方式中定义一个对象，那么JSON方法将是一个好的选择。如果需要将对象序列化并且通过网络进行传输，JSON也几乎非常明显是首选。JSON方式也很方便重构一个从服务器传送来的对象。例如：
 
-<pre class="prettyprint lang-js">
-<table class="prettyprint-table"><tbody><tr><td>
+{% highlight javascript %}
     var res = '{name:"ljhero",sayName: function() {alert(this.name);}}';
 
     var p = eval('('+res+')');
     p.sayName();
-</td></tr></tbody></table>
-</pre>
+{% endhighlight %}	
 
 需要注意的是eval在执行JSON格式字符串时，要多加一个括号，这是因为`{}`在Javascript首先是被当做代码块执行，加括号避免出现这种错误。
 

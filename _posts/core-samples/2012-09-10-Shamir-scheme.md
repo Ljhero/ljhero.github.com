@@ -49,8 +49,7 @@ A对消息m的签名为(t, s)
 
 从对Shamir方案的分析过程可知，其中最主要的操作就是对大数的操作包括乘法，幂运算及模运算。好在OpenSSL提供了一些列大数操作函数，所以此方案实现也不是很困难。其中用到的大数操作函数介绍可以[查看此页面](http://linux.die.net/man/3/bn_mod_exp)，更详细的介绍可以查看赵春平老师对于OpenSSL的介绍文档[Openssl编程][2]。
 
-<pre class="prettyprint lang-c">
-<table class="prettyprint-table"><tbody><tr><td>
+{% highlight c %}
 // Shamir基于身份认证
 int ShamirTest(){
 	BIGNUM	*p,*q;//两个大素数
@@ -176,13 +175,11 @@ int ShamirTest(){
 	BN_CTX_free(ctx); 
 	return 0;
 }
-</td></tr></tbody></table>
-</pre>
+{% endhighlight %}	
 
 因为Shamir方案参数参数与RSA算法一样，所以可以利用Openssl中RSA相关函数更方便的生成参数n，e和d。
 
-<pre class="prettyprint lang-c">
-<table class="prettyprint-table"><tbody><tr><td>
+{% highlight c %}
 	rsa = RSA_generate_key(bits,RSA_3,NULL,NULL);
 	d = BN_new();
 	n = BN_new();
@@ -190,8 +187,7 @@ int ShamirTest(){
 	BN_copy(d,rsa->d);
 	BN_copy(n,rsa->n);
 	BN_copy(e,rsa->e);
-</td></tr></tbody></table>
-</pre>
+{% endhighlight %}	
 
 本文示例程序完整代码：[下载][3]
 
