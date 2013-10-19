@@ -13,7 +13,7 @@ Input data: A list of the weights.
 
 Output data: A number representing the lowest possible weight difference.
 
-Example:
+Example:  
 checkio([10,10]) == 0  
 checkio([10]) == 10  
 checkio([5, 8, 13, 27, 14]) == 3  
@@ -36,7 +36,7 @@ sum1 <= sum2
 故问题转换为在 sum1 <= SUM/2 的条件下，求sum1的最大值。 
 也就是从数组中选出某些数，其和最接近SUM/2,这其实就是简单的01背包问题。  
 
-背包容量是SUM/2, 每个物体的体积是数的大小，目标是尽可能装满背包 
+背包容量是SUM/2, 每个物体的体积是数的大小，目标是尽可能装满背包   
 背包问题算法：
 {% highlight py %}
 A[n][v]: n为物体个数，v为背包容量。
