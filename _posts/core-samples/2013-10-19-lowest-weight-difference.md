@@ -14,29 +14,29 @@ Input data: A list of the weights.
 Output data: A number representing the lowest possible weight difference.
 
 Example:
-checkio([10,10]) == 0
-checkio([10]) == 10
-checkio([5, 8, 13, 27, 14]) == 3
-checkio([5,5,6,5]) == 1
-checkio([12, 30, 30, 32, 42, 49]) == 9
-checkio([1, 1, 1, 3]) == 0
+checkio([10,10]) == 0 
+checkio([10]) == 10 
+checkio([5, 8, 13, 27, 14]) == 3 
+checkio([5,5,6,5]) == 1 
+checkio([12, 30, 30, 32, 42, 49]) == 9 
+checkio([1, 1, 1, 3]) == 0 
 
 From：[checkio](http://www.checkio.org/mission/task/info/loading-cargo/python-27/)
 
 ### 分析：
 两部分差值最小就是说两部分的和最接近，这就可推出和值与数组中所有元素的和(SUM)的一半也是最接近的。
 
-假设：
-sum1：第一部分的和
-sum2：第二部分的和
-SUM:  所有数的和
-sum1 <= sum2
+假设： 
+sum1：第一部分的和 
+sum2：第二部分的和 
+SUM:  所有数的和 
+sum1 <= sum2 
 
 由SUM = sum1 + sum2 可得 SUM/2 - sum1 = sum2 - SUM/2
 故问题转换为在 sum1 <= SUM/2 的条件下，求sum1的最大值。
 也就是从数组中选出某些数，其和最接近SUM/2,这其实就是简单的01背包问题。
 
-背包容量是SUM/2, 每个物体的体积是数的大小，目标是尽可能装满背包
+背包容量是SUM/2, 每个物体的体积是数的大小，目标是尽可能装满背包 
 背包问题算法：
 {% highlight py %}
 A[n][v]: n为物体个数，v为背包容量。
@@ -67,8 +67,8 @@ def checkio(data):
     return SUM - 2*dp[n][SUM/2]
 {% endhighlight %}	
 
-dp[n][SUM/2]为sum1的最大值，故两者的差为 
-sum2 - sum1 = (SUM-sum1)-sum1 = SUM-2*sum1 = SUM - 2*dp[n][SUM/2]
+dp[n][SUM/2]为sum1的最大值，故两者的差为  
+sum2 - sum1 = (SUM-sum1)-sum1 = SUM-2\*sum1 = SUM - 2\*dp[n][SUM/2]
 
 ### 参考：
 - [souldak, 将数组分成两部分使得两部分的和的差最小](http://blog.csdn.net/souldak/article/details/12354325)
