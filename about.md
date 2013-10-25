@@ -4,14 +4,13 @@ title: About
 disqus: false
 ---
 
-## Create by Mu-An
+Hi there.
 
-Give people something to read and get to know you. Here's my attempt: this is [Mu-An](http://muan.co), a designer developer who lives in London at the moment.
+This blog is summary of my thoughts, hacks and writings.
 
-Tweet at [@muanchiou](http://twitter.com/muanchiou), read my code on [GitHub](http://github.com/muan), see my designs on [Dribbble](http://dribbble.com/muan), find my CV on [LinkedIn](http://uk.linkedin.com/in/muanchiou).
+You can follow me on [Twitter](https://twitter.com/ljhero)  or directly send an email to contact me.    
+I greatly appreciate your comments and suggestions.
 
-This theme is made by me. You have a nice day. ♥
+This theme is made by [Mu-An](http://muan.co) and modified by [Rei](http://chloerei.com). 
 
-## Modify by Rei
 
-http://chloerei.com
