@@ -13,7 +13,6 @@ links:
     url:          /feed.xml
   - name:         Blog
     url:          http://ljhero.info
-    external:     true
   - name:         Twitter
     url:          https://twitter.com/ljhero
     external:     true
