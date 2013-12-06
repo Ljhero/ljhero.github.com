@@ -70,6 +70,8 @@ https://github.com/phinze/homebrew-cask/commits/master/Casks/vagrant.rb
 brew cask install vagrant
 {% endhighlight %}	
 
+安装是通过命令行方式，所以可以创建个 shell 脚本实现批量安装。一键装机什么的也就轻松搞定啦。
+
 查看已安装的软件
 
 {% highlight bash %}
@@ -80,11 +82,21 @@ alfred	  vagrant
 同时在Launchpad中也能查看到新安装的软件，因vagrant并没有GUI没有打包成APP，所以在Launchpad中没有看到vagrant的软件图标。
 不过在用户的Application目录中可以看到vagrant的软件目录。
 
-更新软件
+更新Casks
 
 {% highlight bash %}
-brew update
+brew update && brew upgrade brew-cask
 {% endhighlight %}	
+
+关于软件更新
+
+目前 homebrew-cask 并没有命令直接更新所有已安装的软件，软件更新主要是通过软件自身的更新流程，不过也可以通过以下所示命令先删除 APP，再重新安装。
+
+{% highlight bash %}
+brew cask uninstall APP && brew cask install APP
+{% endhighlight %}	
+
+软件默认安装在`/opt/homebrew-cask/Caskroom/`目录下。
 
 卸载软件，同样以vagrant为例
 
