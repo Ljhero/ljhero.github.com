@@ -4,7 +4,6 @@ layout: post
 category : database
 tags : [Neo4j, 图形数据库]
 ---
-{% include JB/setup %}
 
 ## Neo4j简介
 
