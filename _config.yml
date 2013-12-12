@@ -21,7 +21,7 @@ links:
     external:     true
 
 pygments:         true
-permalink:        pretty
+permalink:        /:year-:month-:day/:title.html
 markdown:         redcarpet
 redcarpet:
   extensions:     [autolink, tables]
