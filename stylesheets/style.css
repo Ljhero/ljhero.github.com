@@ -271,8 +271,10 @@ section.post {
     border-top-right-radius: 3px; }
 
 section.post, section > p {
-  font-size: 14px;
-  line-height: 1.6em; }
+  font-size: 16px;
+  line-height: 1.7;
+  color: #414243;
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, "hiragino Sans GB", sansserif;}
   section.post *, section > p * {
     max-width: 100%; }
   section.post em strong, section > p em strong {
