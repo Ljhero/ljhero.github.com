@@ -8,6 +8,7 @@ published: true
 
 
 不同性质的图中，所采取的策略有所不同，自然存在各样的求最短路径的算法。
+
 * 无向无权图：BFS
 * 有向正权图：Dijkstra
 * 有向无负环图：Bellman-Ford（单点），Floyd-Warshall(任意两点）
