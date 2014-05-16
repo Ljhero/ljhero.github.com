@@ -286,6 +286,7 @@ section.post, section > p {
     background: #f9f9f9;
     position: relative;
     overflow: hidden;
+	padding: 0 15px;
     display: block; }
     section.post blockquote:hover, section > p blockquote:hover {
       color: #454545; }
