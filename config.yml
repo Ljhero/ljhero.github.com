@@ -36,12 +36,14 @@ menu:
           url: tags/
           weight: 10
         - name: 🗂归档
-          url: archives
+          url: archives/
           weight: 15
         - name: 🔍搜索
           url: search/
           weight: 20
-
+        - name: 🤖关于
+          url: about/
+          weight: 20
 params:
     defaultTheme: auto
     ShowShareButtons: false
