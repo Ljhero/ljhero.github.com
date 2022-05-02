@@ -6,18 +6,20 @@
     <description>Recent content in Posts on Ljhero&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 02 May 2022 08:37:34 +0000</lastBuildDate><atom:link href="https://ljhero.github.io/posts/atom.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 02 May 2022 13:08:44 +0000</lastBuildDate><atom:link href="https://ljhero.github.io/posts/atom.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>使用 Hugo 和 GitHub Pages 搭建个人博客</title>
       <link>https://ljhero.github.io/posts/build-blog-with-hugo/</link>
-      <pubDate>Mon, 02 May 2022 08:37:34 +0000</pubDate>
+      <pubDate>Mon, 02 May 2022 13:08:44 +0000</pubDate>
       
       <guid>https://ljhero.github.io/posts/build-blog-with-hugo/</guid>
-      <description>本文记录使用 Hugo 和 GitHub Pages搭建个人博客过程 。
+      <description>#Share #Area/写作
+本文记录使用 Hugo 和 GitHub Pages搭建个人博客过程 。
 安装 Hugo Hugo 是 Go 语言开发且开源的静态站点生成工具。 参考官方的 Quick Start教程进行安装和使用。
-brew install hugo # 查看安装后的版本 ❯ hugo version hugo v0.98.0+extended darwin/arm64 BuildDate=unknown 新建博客代码目录 hugo new site ljhero -f yml # 初始化 git init 配置主题 下载安装 PaperMod 主题，通过 git submodule 的形式添加到 themes 目录。
-git submodule add --depth=1 \  https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod git submodule update --init --recursive # update theme git submodule update --remote --merge 修改 config.yml 添加主题配置</description>
-      <content:encoded><![CDATA[<p>本文记录使用 <a href="https://gohugo.io/">Hugo</a> 和 <a href="https://pages.github.com/">GitHub Pages</a>搭建个人博客过程 。</p>
+brew install hugo # 查看安装后的版本 ❯ hugo version hugo v0.98.0+extended darwin/arm64 BuildDate=unknown 新建博客代码目录 hugo new site ljhero.github.io -f yml # 初始化 git init 配置主题 下载安装 PaperMod 主题，通过 git submodule 的形式添加到 themes 目录。
+git submodule add --depth=1 \  https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod git submodule update --init --recursive # update theme git submodule update --remote --merge 修改 config.</description>
+      <content:encoded><![CDATA[<p>#Share  #Area/写作</p>
+<p>本文记录使用 <a href="https://gohugo.io/">Hugo</a> 和 <a href="https://pages.github.com/">GitHub Pages</a>搭建个人博客过程 。</p>
 <h2 id="安装-hugo">安装 Hugo</h2>
 <p><a href="https://gohugo.io/">Hugo</a> 是 Go 语言开发且开源的静态站点生成工具。
 参考官方的 <a href="https://gohugo.io/getting-started/quick-start/">Quick Start</a>教程进行安装和使用。</p>
@@ -26,7 +28,7 @@ git submodule add --depth=1 \  https://github.com/adityatelange/hugo-PaperMod.gi
 </span></span><span class="line"><span class="cl">❯ hugo version
 </span></span><span class="line"><span class="cl">hugo v0.98.0+extended darwin/arm64 <span class="nv">BuildDate</span><span class="o">=</span>unknown
 </span></span></code></pre></div><h2 id="新建博客代码目录">新建博客代码目录</h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">hugo new site ljhero -f yml
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">hugo new site ljhero.github.io -f yml
 </span></span><span class="line"><span class="cl"><span class="c1"># 初始化</span>
 </span></span><span class="line"><span class="cl">git init
 </span></span></code></pre></div><h2 id="配置主题">配置主题</h2>
