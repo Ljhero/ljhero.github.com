@@ -1,7 +1,8 @@
 ---
-title: "使用 Hugo 搭建个人博客"
-date: 2022-05-02T16:37:34+08:00
+title: 使用 Hugo 搭建个人博客
+date: 2022-05-02T08:37:34.000Z
 draft: false
+date updated: 2022-05-02 17:44
 ---
 
 本文记录使用 Hugo 搭建个人博客并部署到 GitHub Pages。
@@ -20,18 +21,15 @@ hugo v0.98.0+extended darwin/arm64 BuildDate=unknown
 
 ## 新建博客代码目录
 
-
 ```shell
 hugo new site ljhero -f yml
 # 初始化
 git init
 ```
 
-
 ## 配置主题
 
 下载安装 [PaperMod](https://github.com/adityatelange/hugo-PaperMod) 主题，通过 git submodule 的形式添加到 themes 目录。
-
 
 ```shell
 git submodule add --depth=1 https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod
@@ -51,7 +49,7 @@ theme: PaperMod
 
 参考 [GitHub Pages](https://pages.github.com/) 教程，创建公开的同名 repo，并关联到本地通过 Hugo 创建的博客目录。
 
-按照 Hugo 的 [Host on GitHub](https://gohugo.io/hosting-and-deployment/hosting-on-github/) 通过 GitHub Action 构建生产静态 HTML 文件并发布到 `gh-pages` 分支。
+参考 Hugo 官方的 [Host on GitHub](https://gohugo.io/hosting-and-deployment/hosting-on-github/) 教程，通过 GitHub Action 构建生产静态 HTML 文件并发布到 `gh-pages` 分支。
 
 1. 创建 Github Actions workflow 文件 `.github/workflows/gh-pages.yml` ，当有 push 操作时，自动构建并把生成的静态文件推送到 `gh-pages` 分支。
 
