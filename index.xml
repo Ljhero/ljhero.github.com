@@ -19,5 +19,7 @@ brew install hugo # 查看安装后的版本 ❯ hugo version hugo v0.98.0+exten
 git submodule add --depth=1 \  https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod git submodule update --init --recursive # update theme git submodule update --remote --merge 修改 config.yml 添加主题配置</description>
     </item>
     
+    
+    
   </channel>
 </rss>
