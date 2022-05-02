@@ -1,11 +1,11 @@
 ---
-title: 使用 Hugo 搭建个人博客
+title: 使用 Hugo 和 GitHub Pages 搭建个人博客
 date: 2022-05-02T08:37:34.000Z
 draft: false
-date updated: 2022-05-02 17:44
+date updated: 2022-05-02 18:12
 ---
 
-本文记录使用 Hugo 搭建个人博客并部署到 GitHub Pages。
+本文记录使用 [Hugo](https://gohugo.io/) 和 [GitHub Pages](https://pages.github.com/)搭建个人博客过程 。
 
 ## 安装 Hugo
 
@@ -32,8 +32,9 @@ git init
 下载安装 [PaperMod](https://github.com/adityatelange/hugo-PaperMod) 主题，通过 git submodule 的形式添加到 themes 目录。
 
 ```shell
-git submodule add --depth=1 https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod
-git submodule update --init --recursive # needed when you reclone your repo (submodules may not get cloned automatically)
+git submodule add --depth=1 \ 
+    https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod
+git submodule update --init --recursive
 # update theme
 git submodule update --remote --merge
 ```
@@ -92,7 +93,6 @@ jobs:
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
-        if: github.ref == 'refs/heads/main'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
@@ -104,4 +104,10 @@ jobs:
 baseURL: https://ljhero.github.io
 ```
 
-4. push 代码后，前往 Github 上博客 repo 的设置页面，将 GitHub Pages 关联的 branch 修改为 `gh-pages`。
+3. push 代码后，前往 Github 上博客 repo 的设置页面，将 GitHub Pages 关联的 branch 修改为 `gh-pages`。
+
+## 参考资料
+
+- Hugo [Quick Start](https://gohugo.io/getting-started/quick-start/)
+- Hugo [Host on GitHub](https://gohugo.io/hosting-and-deployment/hosting-on-github/)
+- [GitHub Pages Documentation](https://docs.github.com/en/pages)
