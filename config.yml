@@ -15,17 +15,23 @@ pygmentsUseClasses: true
 minify:
     disableXML: true
 
+outputs:
+    home:
+        - HTML
+        - RSS
+        - JSON
+
 menu:
     main:
-        - name: 分类
+        - name: 📚分类
           url: categories/
-          weight: 10
-        - name: 标签
+          weight: 5
+        - name: 🏷️标签
           url: tags/
           weight: 10
-        - name: 归档
+        - name: 🗂归档
           url: archives
-          weight: 5
-        - name: 搜索
+          weight: 15
+        - name: 🔍搜索
           url: search/
-          weight: 10
+          weight: 20
