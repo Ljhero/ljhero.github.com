@@ -44,7 +44,7 @@ menu:
 
 params:
     defaultTheme: auto
-    ShowShareButtons: true
+    ShowShareButtons: false
     ShowReadingTime: true
     displayFullLangName: true
     ShowPostNavLinks: true
@@ -53,3 +53,13 @@ params:
     ShowRssButtonInSectionTermList: true
     ShowFullTextinRSS: true
     ShowToc: true
+
+    homeInfoParams:
+        Title: Hi there 👋
+        Content: Welcome to my blog
+
+    socialIcons: # optional
+        - name: GitHub
+          url: "https://github.com/Ljhero"
+        - name: "RSS"
+          url: "atom.xml"
