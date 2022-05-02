@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://ljhero.github.io/sitemap.xml
