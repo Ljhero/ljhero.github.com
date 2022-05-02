@@ -1,9 +1,11 @@
 ---
 title: 使用 Hugo 和 GitHub Pages 搭建个人博客
-date: 2022-05-02T08:37:34.000Z
+date: 2022-05-02T13:08:44.000Z
 draft: false
-date updated: 2022-05-02 18:12
+date updated: 2022-05-02 21:29
 ---
+
+#Share  #Area/写作
 
 本文记录使用 [Hugo](https://gohugo.io/) 和 [GitHub Pages](https://pages.github.com/)搭建个人博客过程 。
 
@@ -22,7 +24,7 @@ hugo v0.98.0+extended darwin/arm64 BuildDate=unknown
 ## 新建博客代码目录
 
 ```shell
-hugo new site ljhero -f yml
+hugo new site ljhero.github.io -f yml
 # 初始化
 git init
 ```
