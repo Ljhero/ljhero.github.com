@@ -1,0 +1,5 @@
+baseURL: https://ljhero.github.io
+languageCode: zh-cmn
+title: Ljhero's blog
+paginate: 5
+theme: PaperMod

@@ -1,0 +1,7 @@
+/public
+
+Thumbs.db
+.DS_Store
+
+!.gitkeep
+.hugo_build.lock
