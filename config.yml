@@ -1,7 +1,6 @@
 baseURL: https://ljhero.github.io
 languageCode: zh
 title: Ljhero's blog
-paginate: 5
 theme: PaperMod
 
 enableInlineShortcodes: true
@@ -11,6 +10,8 @@ buildFuture: false
 buildExpired: false
 enableEmoji: true
 pygmentsUseClasses: true
+rssLimit: 20
+paginate: 5
 
 minify:
     disableXML: true
@@ -20,6 +21,11 @@ outputs:
         - HTML
         - RSS
         - JSON
+
+outputFormats:
+  RSS:
+    mediatype: "application/rss+xml"
+    baseName: "atom"
 
 menu:
     main:
@@ -35,3 +41,15 @@ menu:
         - name: 🔍搜索
           url: search/
           weight: 20
+
+params:
+    defaultTheme: auto
+    ShowShareButtons: true
+    ShowReadingTime: true
+    displayFullLangName: true
+    ShowPostNavLinks: true
+    ShowBreadCrumbs: true
+    ShowCodeCopyButtons: true
+    ShowRssButtonInSectionTermList: true
+    ShowFullTextinRSS: true
+    ShowToc: true
