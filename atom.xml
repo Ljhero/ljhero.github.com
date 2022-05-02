@@ -6,20 +6,64 @@
     <description>Recent content on Ljhero&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 02 May 2022 13:08:44 +0000</lastBuildDate><atom:link href="https://ljhero.github.io/atom.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 02 May 2022 21:16:09 +0800</lastBuildDate><atom:link href="https://ljhero.github.io/atom.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用 giscus 给博客添加评论功能</title>
+      <link>https://ljhero.github.io/posts/2022-05-02-support-comment-using-giscus/</link>
+      <pubDate>Mon, 02 May 2022 21:16:09 +0800</pubDate>
+      
+      <guid>https://ljhero.github.io/posts/2022-05-02-support-comment-using-giscus/</guid>
+      <description>Giscus 简介 giscus 是由 GitHub Discussions 驱动的评论系统，全部评论数据储存在 GitHub Discussions 中，一篇博客关联一个 discussion。除了支持评论还支持关联 Discussion 帖子上的表情回复 (reaction) 。
+配置 giscus 按照 giscus 官方文档 配置章节的说明，安装 giscus app 并在为所使用的 GitHub 仓库开启 Discussions 功能。
+完成映射关系和特性配置后，获得启用 giscus 的代码。
+&amp;lt;script src=&amp;#34;https://giscus.app/client.js&amp;#34; data-repo=&amp;#34;Ljhero/ljhero.github.com&amp;#34; data-repo-id=&amp;#34;MDEwOlJlcG9zaXRvcnkzNDQxNjk4&amp;#34; data-category=&amp;#34;Comments&amp;#34; data-category-id=&amp;#34;DIC_kwDOADSEIs4CO5XI&amp;#34; data-mapping=&amp;#34;pathname&amp;#34; data-reactions-enabled=&amp;#34;1&amp;#34; data-emit-metadata=&amp;#34;0&amp;#34; data-input-position=&amp;#34;top&amp;#34; data-theme=&amp;#34;light&amp;#34; data-lang=&amp;#34;zh-CN&amp;#34; data-loading=&amp;#34;lazy&amp;#34; crossorigin=&amp;#34;anonymous&amp;#34; async&amp;gt; &amp;lt;/script&amp;gt; 配置 Hugo 博客仓库根目录下创建 layouts/partials/comments.html 文件，文件中添加上一步获取到的 giscus 启用代码。
+最后修改 config.yml 启用 comments
+params:comments:true参考资料  giscus 官方文档 PaperMod 主题 Comments 设置 胡涂说的文章给博客换了套新评论系统  </description>
+      <content:encoded><![CDATA[<h2 id="giscus-简介">Giscus 简介</h2>
+<p><a href="https://giscus.app/">giscus</a> 是由 GitHub Discussions 驱动的评论系统，全部评论数据储存在 <a href="https://docs.github.com/en/discussions/quickstart">GitHub Discussions</a> 中，一篇博客关联一个 discussion。除了支持评论还支持关联 Discussion 帖子上的表情回复 (reaction) 。</p>
+<h2 id="配置-giscus">配置 giscus</h2>
+<p>按照 <a href="https://giscus.app/zh-CN">giscus 官方文档</a> 配置章节的说明，<a href="https://github.com/apps/giscus">安装 giscus app</a> 并在为所使用的 GitHub 仓库<a href="https://docs.github.com/en/discussions/quickstart">开启 Discussions</a> 功能。</p>
+<p>完成映射关系和特性配置后，获得启用 giscus 的代码。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&#34;https://giscus.app/client.js&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">data</span><span class="o">-</span><span class="nx">repo</span><span class="o">=</span><span class="s2">&#34;Ljhero/ljhero.github.com&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">data</span><span class="o">-</span><span class="nx">repo</span><span class="o">-</span><span class="nx">id</span><span class="o">=</span><span class="s2">&#34;MDEwOlJlcG9zaXRvcnkzNDQxNjk4&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">data</span><span class="o">-</span><span class="nx">category</span><span class="o">=</span><span class="s2">&#34;Comments&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">data</span><span class="o">-</span><span class="nx">category</span><span class="o">-</span><span class="nx">id</span><span class="o">=</span><span class="s2">&#34;DIC_kwDOADSEIs4CO5XI&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">data</span><span class="o">-</span><span class="nx">mapping</span><span class="o">=</span><span class="s2">&#34;pathname&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">data</span><span class="o">-</span><span class="nx">reactions</span><span class="o">-</span><span class="nx">enabled</span><span class="o">=</span><span class="s2">&#34;1&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">data</span><span class="o">-</span><span class="nx">emit</span><span class="o">-</span><span class="nx">metadata</span><span class="o">=</span><span class="s2">&#34;0&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">data</span><span class="o">-</span><span class="nx">input</span><span class="o">-</span><span class="nx">position</span><span class="o">=</span><span class="s2">&#34;top&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">data</span><span class="o">-</span><span class="nx">theme</span><span class="o">=</span><span class="s2">&#34;light&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">data</span><span class="o">-</span><span class="nx">lang</span><span class="o">=</span><span class="s2">&#34;zh-CN&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">data</span><span class="o">-</span><span class="nx">loading</span><span class="o">=</span><span class="s2">&#34;lazy&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">crossorigin</span><span class="o">=</span><span class="s2">&#34;anonymous&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="kr">async</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="o">&lt;</span><span class="err">/script&gt;</span>
+</span></span></code></pre></div><h2 id="配置-hugo">配置 Hugo</h2>
+<p>博客仓库根目录下创建 <code>layouts/partials/comments.html</code> 文件，文件中添加上一步获取到的 giscus  启用代码。</p>
+<p>最后修改 <code>config.yml</code> 启用 comments</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="nt">params</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">comments</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span></code></pre></div><h2 id="参考资料">参考资料</h2>
+<ul>
+<li><a href="https://giscus.app/zh-CN">giscus 官方文档</a></li>
+<li><a href="https://github.com/adityatelange/hugo-PaperMod/wiki/Features#comments">PaperMod 主题 Comments 设置</a></li>
+<li>胡涂说的文章<a href="https://hutusi.com/articles/comment-via-giscus">给博客换了套新评论系统</a></li>
+</ul>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>使用 Hugo 和 GitHub Pages 搭建个人博客</title>
-      <link>https://ljhero.github.io/posts/build-blog-with-hugo/</link>
+      <link>https://ljhero.github.io/posts/2022-05-02-build-blog-with-hugo/</link>
       <pubDate>Mon, 02 May 2022 13:08:44 +0000</pubDate>
       
-      <guid>https://ljhero.github.io/posts/build-blog-with-hugo/</guid>
-      <description>#Share #Area/写作
-本文记录使用 Hugo 和 GitHub Pages搭建个人博客过程 。
+      <guid>https://ljhero.github.io/posts/2022-05-02-build-blog-with-hugo/</guid>
+      <description>本文记录使用 Hugo 和 GitHub Pages搭建个人博客过程 。
 安装 Hugo Hugo 是 Go 语言开发且开源的静态站点生成工具。 参考官方的 Quick Start教程进行安装和使用。
 brew install hugo # 查看安装后的版本 ❯ hugo version hugo v0.98.0+extended darwin/arm64 BuildDate=unknown 新建博客代码目录 hugo new site ljhero.github.io -f yml # 初始化 git init 配置主题 下载安装 PaperMod 主题，通过 git submodule 的形式添加到 themes 目录。
-git submodule add --depth=1 \  https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod git submodule update --init --recursive # update theme git submodule update --remote --merge 修改 config.</description>
-      <content:encoded><![CDATA[<p>#Share  #Area/写作</p>
-<p>本文记录使用 <a href="https://gohugo.io/">Hugo</a> 和 <a href="https://pages.github.com/">GitHub Pages</a>搭建个人博客过程 。</p>
+git submodule add --depth=1 \  https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod git submodule update --init --recursive # update theme git submodule update --remote --merge 修改 config.yml 添加主题配置</description>
+      <content:encoded><![CDATA[<p>本文记录使用 <a href="https://gohugo.io/">Hugo</a> 和 <a href="https://pages.github.com/">GitHub Pages</a>搭建个人博客过程 。</p>
 <h2 id="安装-hugo">安装 Hugo</h2>
 <p><a href="https://gohugo.io/">Hugo</a> 是 Go 语言开发且开源的静态站点生成工具。
 参考官方的 <a href="https://gohugo.io/getting-started/quick-start/">Quick Start</a>教程进行安装和使用。</p>

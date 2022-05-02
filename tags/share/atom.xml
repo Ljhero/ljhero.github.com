@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Posts on Ljhero&#39;s blog</title>
-    <link>https://ljhero.github.io/posts/</link>
-    <description>Recent content in Posts on Ljhero&#39;s blog</description>
+    <title>Share on Ljhero&#39;s blog</title>
+    <link>https://ljhero.github.io/tags/share/</link>
+    <description>Recent content in Share on Ljhero&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 02 May 2022 21:16:09 +0800</lastBuildDate><atom:link href="https://ljhero.github.io/posts/atom.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 02 May 2022 21:16:09 +0800</lastBuildDate><atom:link href="https://ljhero.github.io/tags/share/atom.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>使用 giscus 给博客添加评论功能</title>
       <link>https://ljhero.github.io/posts/2022-05-02-support-comment-using-giscus/</link>

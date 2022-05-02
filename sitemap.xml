@@ -3,22 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://ljhero.github.io/</loc>
-    <lastmod>2022-05-02T13:08:44+00:00</lastmod>
+    <lastmod>2022-05-02T21:16:09+08:00</lastmod>
   </url><url>
     <loc>https://ljhero.github.io/posts/</loc>
-    <lastmod>2022-05-02T13:08:44+00:00</lastmod>
+    <lastmod>2022-05-02T21:16:09+08:00</lastmod>
   </url><url>
-    <loc>https://ljhero.github.io/posts/build-blog-with-hugo/</loc>
+    <loc>https://ljhero.github.io/tags/share/</loc>
+    <lastmod>2022-05-02T21:16:09+08:00</lastmod>
+  </url><url>
+    <loc>https://ljhero.github.io/tags/</loc>
+    <lastmod>2022-05-02T21:16:09+08:00</lastmod>
+  </url><url>
+    <loc>https://ljhero.github.io/posts/2022-05-02-support-comment-using-giscus/</loc>
+    <lastmod>2022-05-02T21:16:09+08:00</lastmod>
+  </url><url>
+    <loc>https://ljhero.github.io/posts/2022-05-02-build-blog-with-hugo/</loc>
     <lastmod>2022-05-02T13:08:44+00:00</lastmod>
   </url><url>
     <loc>https://ljhero.github.io/about/</loc>
   </url><url>
     <loc>https://ljhero.github.io/archives/</loc>
   </url><url>
+    <loc>https://ljhero.github.io/tags/area/%E5%86%99%E4%BD%9C/</loc>
+  </url><url>
     <loc>https://ljhero.github.io/categories/</loc>
   </url><url>
     <loc>https://ljhero.github.io/search/</loc>
-  </url><url>
-    <loc>https://ljhero.github.io/tags/</loc>
   </url>
 </urlset>
