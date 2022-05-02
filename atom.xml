@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Ljhero&#39;s blog</title>
+    <link>https://ljhero.github.io/</link>
+    <description>Recent content on Ljhero&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Mon, 02 May 2022 08:37:34 +0000</lastBuildDate><atom:link href="https://ljhero.github.io/atom.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用 Hugo 和 GitHub Pages 搭建个人博客</title>
+      <link>https://ljhero.github.io/posts/build-blog-with-hugo/</link>
+      <pubDate>Mon, 02 May 2022 08:37:34 +0000</pubDate>
+      
+      <guid>https://ljhero.github.io/posts/build-blog-with-hugo/</guid>
+      <description>本文记录使用 Hugo 和 GitHub Pages搭建个人博客过程 。
+安装 Hugo Hugo 是 Go 语言开发且开源的静态站点生成工具。 参考官方的 Quick Start教程进行安装和使用。
+brew install hugo # 查看安装后的版本 ❯ hugo version hugo v0.98.0+extended darwin/arm64 BuildDate=unknown 新建博客代码目录 hugo new site ljhero -f yml # 初始化 git init 配置主题 下载安装 PaperMod 主题，通过 git submodule 的形式添加到 themes 目录。
+git submodule add --depth=1 \  https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod git submodule update --init --recursive # update theme git submodule update --remote --merge 修改 config.yml 添加主题配置</description>
+      <content:encoded><![CDATA[<p>本文记录使用 <a href="https://gohugo.io/">Hugo</a> 和 <a href="https://pages.github.com/">GitHub Pages</a>搭建个人博客过程 。</p>
+<h2 id="安装-hugo">安装 Hugo</h2>
+<p><a href="https://gohugo.io/">Hugo</a> 是 Go 语言开发且开源的静态站点生成工具。
+参考官方的 <a href="https://gohugo.io/getting-started/quick-start/">Quick Start</a>教程进行安装和使用。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">brew install hugo
+</span></span><span class="line"><span class="cl"><span class="c1"># 查看安装后的版本</span>
+</span></span><span class="line"><span class="cl">❯ hugo version
+</span></span><span class="line"><span class="cl">hugo v0.98.0+extended darwin/arm64 <span class="nv">BuildDate</span><span class="o">=</span>unknown
+</span></span></code></pre></div><h2 id="新建博客代码目录">新建博客代码目录</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">hugo new site ljhero -f yml
+</span></span><span class="line"><span class="cl"><span class="c1"># 初始化</span>
+</span></span><span class="line"><span class="cl">git init
+</span></span></code></pre></div><h2 id="配置主题">配置主题</h2>
+<p>下载安装 <a href="https://github.com/adityatelange/hugo-PaperMod">PaperMod</a> 主题，通过 git submodule 的形式添加到 themes 目录。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">git submodule add --depth<span class="o">=</span><span class="m">1</span> <span class="se">\ </span>
+</span></span><span class="line"><span class="cl">    https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod
+</span></span><span class="line"><span class="cl">git submodule update --init --recursive
+</span></span><span class="line"><span class="cl"><span class="c1"># update theme</span>
+</span></span><span class="line"><span class="cl">git submodule update --remote --merge
+</span></span></code></pre></div><p>修改 <code>config.yml</code> 添加主题配置</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="nt">paginate</span><span class="p">:</span><span class="w"> </span><span class="m">5</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">theme</span><span class="p">:</span><span class="w"> </span><span class="l">PaperMod</span><span class="w">
+</span></span></span></code></pre></div><h2 id="设置-github-pages">设置 GitHub Pages</h2>
+<p>参考 <a href="https://pages.github.com/">GitHub Pages</a> 教程，创建公开的同名 repo，并关联到本地通过 Hugo 创建的博客目录。</p>
+<p>参考 Hugo 官方的 <a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">Host on GitHub</a> 教程，通过 GitHub Action 构建生产静态 HTML 文件并发布到 <code>gh-pages</code> 分支。</p>
+<ol>
+<li>创建 Github Actions workflow 文件 <code>.github/workflows/gh-pages.yml</code> ，当有 push 操作时，自动构建并把生成的静态文件推送到 <code>gh-pages</code> 分支。</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Build GH-Pages</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">on</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">push</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">paths-ignore</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="s2">&#34;images/**&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="s2">&#34;LICENSE&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="s2">&#34;README.md&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">branches</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">master </span><span class="w"> </span><span class="c"># Set a branch to deploy</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">workflow_dispatch</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># manual run</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">inputs</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">hugoVersion</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Hugo Version&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">default</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;0.98.0&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">jobs</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">deploy</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l">ubuntu-20.04</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">steps</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Git checkout</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">actions/checkout@v2</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Get Theme</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l">git submodule update --init --recursive</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Setup Hugo</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">peaceiris/actions-hugo@v2</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">with</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">hugo-version</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;${{ github.event.inputs.hugoVersion }}&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Build</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l">hugo --gc --verbose --minify</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Deploy</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">peaceiris/actions-gh-pages@v3</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">with</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">github_token</span><span class="p">:</span><span class="w"> </span><span class="l">${{ secrets.GITHUB_TOKEN }}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">publish_dir</span><span class="p">:</span><span class="w"> </span><span class="l">./public</span><span class="w">
+</span></span></span></code></pre></div><ol start="2">
+<li>修改 <code>config.yml</code>  设置 <code>baseURL</code> 为 GitHub Pages 关联的子域名</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="nt">baseURL</span><span class="p">:</span><span class="w"> </span><span class="l">https://ljhero.github.io</span><span class="w">
+</span></span></span></code></pre></div><ol start="3">
+<li>push 代码后，前往 Github 上博客 repo 的设置页面，将 GitHub Pages 关联的 branch 修改为 <code>gh-pages</code>。</li>
+</ol>
+<h2 id="参考资料">参考资料</h2>
+<ul>
+<li>Hugo <a href="https://gohugo.io/getting-started/quick-start/">Quick Start</a></li>
+<li>Hugo <a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">Host on GitHub</a></li>
+<li><a href="https://docs.github.com/en/pages">GitHub Pages Documentation</a></li>
+</ul>
+]]></content:encoded>
+    </item>
+    
+    
+    
+  </channel>
+</rss>
