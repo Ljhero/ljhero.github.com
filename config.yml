@@ -65,3 +65,5 @@ params:
           url: "https://github.com/Ljhero"
         - name: "RSS"
           url: "atom.xml"
+
+    comments: true
