@@ -86,7 +86,7 @@ git submodule add --depth=1 \  https://github.com/adityatelange/hugo-PaperMod.gi
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">theme</span><span class="p">:</span><span class="w"> </span><span class="l">PaperMod</span><span class="w">
 </span></span></span></code></pre></div><h2 id="设置-github-pages">设置 GitHub Pages</h2>
 <p>参考 <a href="https://pages.github.com/">GitHub Pages</a> 教程，创建公开的同名 repo，并关联到本地通过 Hugo 创建的博客目录。</p>
-<p>参考 Hugo 官方的 <a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">Host on GitHub</a> 教程，通过 GitHub Action 构建生产静态 HTML 文件并发布到 <code>gh-pages</code> 分支。</p>
+<p>参考 Hugo 官方的 <a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">Host on GitHub</a> 教程，通过 GitHub Action 构建生成静态 HTML 文件并发布到 <code>gh-pages</code> 分支。</p>
 <ol>
 <li>创建 Github Actions workflow 文件 <code>.github/workflows/gh-pages.yml</code> ，当有 push 操作时，自动构建并把生成的静态文件推送到 <code>gh-pages</code> 分支。</li>
 </ol>
