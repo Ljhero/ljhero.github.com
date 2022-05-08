@@ -54,7 +54,7 @@ theme: PaperMod
 
 参考 [GitHub Pages](https://pages.github.com/) 教程，创建公开的同名 repo，并关联到本地通过 Hugo 创建的博客目录。
 
-参考 Hugo 官方的 [Host on GitHub](https://gohugo.io/hosting-and-deployment/hosting-on-github/) 教程，通过 GitHub Action 构建生产静态 HTML 文件并发布到 `gh-pages` 分支。
+参考 Hugo 官方的 [Host on GitHub](https://gohugo.io/hosting-and-deployment/hosting-on-github/) 教程，通过 GitHub Action 构建生成静态 HTML 文件并发布到 `gh-pages` 分支。
 
 1. 创建 Github Actions workflow 文件 `.github/workflows/gh-pages.yml` ，当有 push 操作时，自动构建并把生成的静态文件推送到 `gh-pages` 分支。
 
