@@ -3,7 +3,7 @@ title: 使用 Hugo 和 GitHub Pages 搭建个人博客
 date: 2022-05-02T13:08:44.000Z
 draft: false
 english filename: 2022-05-02-build-blog-with-hugo
-date updated: 2022-05-02 21:29
+date updated: 2022-12-02 21:29
 Tags:
   - Area/写作
   - Share
@@ -13,7 +13,7 @@ Tags:
 
 ## 安装 Hugo
 
-[Hugo](https://gohugo.io/) 是 Go 语言开发且开源的静态站点生成工具。
+[Hugo](https://gohugo.io/) [^1]是 Go 语言开发且开源的静态站点生成工具。
 参考官方的 [Quick Start](https://gohugo.io/getting-started/quick-start/)教程进行安装和使用。
 
 ```shell
@@ -115,3 +115,5 @@ baseURL: https://ljhero.github.io
 - Hugo [Quick Start](https://gohugo.io/getting-started/quick-start/)
 - Hugo [Host on GitHub](https://gohugo.io/hosting-and-deployment/hosting-on-github/)
 - [GitHub Pages Documentation](https://docs.github.com/en/pages)
+
+[^1]: 参考 Hugo Quick Start
