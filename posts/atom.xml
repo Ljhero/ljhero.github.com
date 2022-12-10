@@ -18,7 +18,7 @@
 完成映射关系和特性配置后，获得启用 giscus 的代码。
 &amp;lt;script src=&amp;#34;https://giscus.app/client.js&amp;#34; data-repo=&amp;#34;Ljhero/ljhero.github.com&amp;#34; data-repo-id=&amp;#34;MDEwOlJlcG9zaXRvcnkzNDQxNjk4&amp;#34; data-category=&amp;#34;Comments&amp;#34; data-category-id=&amp;#34;DIC_kwDOADSEIs4CO5XI&amp;#34; data-mapping=&amp;#34;pathname&amp;#34; data-reactions-enabled=&amp;#34;1&amp;#34; data-emit-metadata=&amp;#34;0&amp;#34; data-input-position=&amp;#34;top&amp;#34; data-theme=&amp;#34;light&amp;#34; data-lang=&amp;#34;zh-CN&amp;#34; data-loading=&amp;#34;lazy&amp;#34; crossorigin=&amp;#34;anonymous&amp;#34; async&amp;gt; &amp;lt;/script&amp;gt; 配置 Hugo 博客仓库根目录下创建 layouts/partials/comments.html 文件，文件中添加上一步获取到的 giscus 启用代码。
 最后修改 config.yml 启用 comments
-params:comments:true参考资料  giscus 官方文档 PaperMod 主题 Comments 设置 胡涂说的文章给博客换了套新评论系统  </description>
+params: comments: true 参考资料 giscus 官方文档 PaperMod 主题 Comments 设置 胡涂说的文章给博客换了套新评论系统 </description>
       <content:encoded><![CDATA[<h2 id="giscus-简介">Giscus 简介</h2>
 <p><a href="https://giscus.app/">giscus</a> 是由 GitHub Discussions 驱动的评论系统，全部评论数据储存在 <a href="https://docs.github.com/en/discussions/quickstart">GitHub Discussions</a> 中，一篇博客关联一个 discussion。除了支持评论还支持关联 Discussion 帖子上的表情回复 (reaction) 。</p>
 <h2 id="配置-giscus">配置 giscus</h2>
@@ -60,12 +60,12 @@ params:comments:true参考资料  giscus 官方文档 PaperMod 主题 Comments �
       
       <guid>https://ljhero.github.io/posts/2022-05-02-build-blog-with-hugo/</guid>
       <description>本文记录使用 Hugo 和 GitHub Pages搭建个人博客过程 。
-安装 Hugo Hugo 是 Go 语言开发且开源的静态站点生成工具。 参考官方的 Quick Start教程进行安装和使用。
+安装 Hugo Hugo 1是 Go 语言开发且开源的静态站点生成工具。 参考官方的 Quick Start教程进行安装和使用。
 brew install hugo # 查看安装后的版本 ❯ hugo version hugo v0.98.0+extended darwin/arm64 BuildDate=unknown 新建博客代码目录 hugo new site ljhero.github.io -f yml # 初始化 git init 配置主题 下载安装 PaperMod 主题，通过 git submodule 的形式添加到 themes 目录。
-git submodule add --depth=1 \  https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod git submodule update --init --recursive # update theme git submodule update --remote --merge 修改 config.yml 添加主题配置</description>
+git submodule add --depth=1 \ https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod git submodule update --init --recursive # update theme git submodule update --remote --merge 修改 config.yml 添加主题配置</description>
       <content:encoded><![CDATA[<p>本文记录使用 <a href="https://gohugo.io/">Hugo</a> 和 <a href="https://pages.github.com/">GitHub Pages</a>搭建个人博客过程 。</p>
 <h2 id="安装-hugo">安装 Hugo</h2>
-<p><a href="https://gohugo.io/">Hugo</a> 是 Go 语言开发且开源的静态站点生成工具。
+<p><a href="https://gohugo.io/">Hugo</a> <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>是 Go 语言开发且开源的静态站点生成工具。
 参考官方的 <a href="https://gohugo.io/getting-started/quick-start/">Quick Start</a>教程进行安装和使用。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">brew install hugo
 </span></span><span class="line"><span class="cl"><span class="c1"># 查看安装后的版本</span>
@@ -145,6 +145,14 @@ git submodule add --depth=1 \  https://github.com/adityatelange/hugo-PaperMod.gi
 <li>Hugo <a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">Host on GitHub</a></li>
 <li><a href="https://docs.github.com/en/pages">GitHub Pages Documentation</a></li>
 </ul>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>参考 Hugo Quick Start&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
 ]]></content:encoded>
     </item>
     
