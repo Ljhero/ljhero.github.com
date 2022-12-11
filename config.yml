@@ -1,8 +1,9 @@
 baseURL: https://ljhero.github.io
 languageCode: zh
 title: Ljhero's blog
-theme: PaperMod
+theme: PaperModX
 
+timeZone: Asia/Shanghai
 enableInlineShortcodes: true
 enableRobotsTXT: true
 buildDrafts: false
@@ -48,6 +49,7 @@ params:
     defaultTheme: auto
     ShowShareButtons: false
     ShowReadingTime: true
+    ShowWordCount: true
     displayFullLangName: true
     ShowPostNavLinks: true
     ShowBreadCrumbs: true
@@ -55,15 +57,29 @@ params:
     ShowRssButtonInSectionTermList: true
     ShowFullTextinRSS: true
     ShowToc: true
+    TocOpen: true
+    TocSide: "right"
+    EnableInstantClick: true
+    EnableImageZoom: true
+    DisableLanguageSwitch: true
 
     homeInfoParams:
         Title: Hi there 👋
         Content: Welcome to my blog
 
     socialIcons: # optional
-        - name: GitHub
+        - name: github-simple
           url: "https://github.com/Ljhero"
-        - name: "RSS"
+        - name: rss-simple
           url: "atom.xml"
 
     comments: true
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    style: dracula
+    lineNos: false
+    noClasses: false
