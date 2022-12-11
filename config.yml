@@ -59,7 +59,7 @@ params:
     ShowToc: true
     TocOpen: true
     TocSide: "right"
-    EnableInstantClick: true
+    EnableInstantClick: false
     EnableImageZoom: true
     DisableLanguageSwitch: true
 
