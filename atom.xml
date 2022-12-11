@@ -156,23 +156,5 @@ git submodule add --depth=1 \ https://github.com/adityatelange/hugo-PaperMod.git
 ]]></content:encoded>
     </item>
     
-    <item>
-      <title>About</title>
-      <link>https://ljhero.github.io/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://ljhero.github.io/about/</guid>
-      <description>About me</description>
-      <content:encoded><![CDATA[<p>Hi there.</p>
-<p>This blog is summary of my thoughts, hacks and writings.</p>
-<p>You can find me on <a href="https://github.com/Ljhero">GitHub</a> or directly send an email to contact me. <br>
-I greatly appreciate your comments and suggestions.</p>
-<p>This blog is built by <a href="https://gohugo.io/">Hugo</a> with the theme <a href="https://github.com/adityatelange/hugo-PaperMod">PaperMod</a>.</p>
-<p>All posts on this blog are licensed under a <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en">Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)</a>.</p>
-]]></content:encoded>
-    </item>
-    
-    
-    
   </channel>
 </rss>
