@@ -14,4 +14,4 @@ I greatly appreciate your comments and suggestions.
 This blog is built by [Hugo](https://gohugo.io/) with the theme [PaperModX](https://github.com/reorx/hugo-PaperModX).
 
 
-All posts on this blog are licensed under a [Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/deed.en).
+All posts on this blog are licensed under a [Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) License](https://creativecommons.org/licenses/by-sa/4.0/deed.en).
